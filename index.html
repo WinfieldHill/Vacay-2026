@@ -1,0 +1,678 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Spring Break 2027 Beach Plans</title>
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,800&family=Caveat:wght@500;700&display=swap">
+<style>
+/* Layout: one long shoreline. A drawn beach opens the page, wave lines separate sections,
+   four tier cards sit in a 2x2 grid, and handwritten postcards are tucked between sections. */
+:root{
+  --bg:#f3fafa; --surface:#ffffff; --ink:#12343f; --muted:#4f6f78; --line:#cfe3e4;
+  --sea:#0f8f9c; --sea-deep:#0b5f73; --sea-pale:#bfe9ea; --sand:#f2dca8; --sand-deep:#e3c47f;
+  --coral:#e2574c; --sun:#f6b93b; --palm:#2f8f5b; --trunk:#8a5a3c;
+  --sky1:#bfe9f5; --sky2:#f7ecd0; --tabby:#b8956a; --tabby-dark:#6b4a2f; --card-post:#fffaf0;
+  --mx:#0f8f9c; --bs:#e2574c; --chip-ink:#ffffff;
+  --display:"DM Serif Display",Georgia,serif;
+  --body:"Nunito Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --hand:"Caveat","Bradley Hand",cursive;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#081c26; --surface:#0f2a36; --ink:#e6f4f4; --muted:#9dbcc2; --line:#1f4250;
+  --sea:#3fc1c9; --sea-deep:#145a70; --sea-pale:#1b6f7f; --sand:#6b5a3a; --sand-deep:#57492e;
+  --coral:#ff8a7a; --sun:#f3e7b3; --palm:#3f9d6c; --trunk:#6f4a33;
+  --sky1:#0b2433; --sky2:#1c3f52; --tabby:#a98a63; --tabby-dark:#4a3422; --card-post:#15323f;
+  --mx:#3fc1c9; --bs:#ff8a7a; --chip-ink:#06202a; color-scheme:dark } }
+:root[data-theme="dark"]{
+  --bg:#081c26; --surface:#0f2a36; --ink:#e6f4f4; --muted:#9dbcc2; --line:#1f4250;
+  --sea:#3fc1c9; --sea-deep:#145a70; --sea-pale:#1b6f7f; --sand:#6b5a3a; --sand-deep:#57492e;
+  --coral:#ff8a7a; --sun:#f3e7b3; --palm:#3f9d6c; --trunk:#6f4a33;
+  --sky1:#0b2433; --sky2:#1c3f52; --tabby:#a98a63; --tabby-dark:#4a3422; --card-post:#15323f;
+  --mx:#3fc1c9; --bs:#ff8a7a; --chip-ink:#06202a; color-scheme:dark }
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55;margin:0}
+.wrap{max-width:1080px;margin:0 auto;padding-inline:20px;padding-block:0 56px;display:flex;flex-direction:column;gap:40px}
+h1,h2,h3{font-family:var(--display);font-weight:400;text-wrap:balance;margin:0;line-height:1.1}
+h1{font-size:clamp(2.2rem,6vw,3.8rem)}
+h2{font-size:clamp(1.6rem,3.6vw,2.2rem)}
+h3{font-size:1.45rem}
+p{margin:0}
+a{color:var(--sea);text-underline-offset:3px}
+a:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+.eyebrow{font-size:.78rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--sea)}
+.muted{color:var(--muted)}
+.num{font-variant-numeric:tabular-nums}
+
+/* hero */
+.hero{display:flex;flex-direction:column;gap:18px;padding-top:28px}
+.hero p.lead{max-width:62ch;font-size:1.1rem}
+.scene{width:100%;height:auto;display:block;border-radius:18px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px 28px;border-block:2px dashed var(--line);padding-block:16px}
+.facts div{display:flex;flex-direction:column;gap:2px;min-width:0}
+.facts b{font-size:1.05rem}
+.facts span{font-size:.9rem;color:var(--muted)}
+
+.wave{width:100%;height:22px;display:block}
+section{display:flex;flex-direction:column;gap:18px}
+section > p{max-width:68ch}
+
+/* tiers */
+.tiers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.tier{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.tier header{display:flex;flex-direction:column;gap:6px}
+.tier .top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.price{font-family:var(--display);font-size:1.9rem;color:var(--sea-deep)}
+:root[data-theme="dark"] .price{color:var(--sea)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .price{color:var(--sea)}}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:.78rem;font-weight:800;padding:3px 10px;border-radius:999px;border:1.5px solid var(--line);color:var(--ink)}
+.chip.mx{background:var(--mx);border-color:var(--mx);color:var(--chip-ink)}
+.chip.bs{background:var(--bs);border-color:var(--bs);color:var(--chip-ink)}
+table{border-collapse:collapse;width:100%;font-size:.93rem}
+td,th{padding:5px 0;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+td:last-child,th:last-child{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;padding-left:12px}
+tr.total td{font-weight:800;border-bottom:0;border-top:2px solid var(--ink)}
+.tier dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 12px;font-size:.93rem}
+.tier dt{font-weight:800}
+.tier dd{margin:0;min-width:0}
+.alt{font-size:.92rem;border-top:2px dashed var(--line);padding-top:12px;display:flex;flex-direction:column;gap:8px}
+.alt b{font-weight:800}
+
+/* postcards */
+.post{background:var(--card-post);border:2px dashed var(--sand-deep);border-radius:6px;padding:18px 22px;font-family:var(--hand);font-size:1.5rem;line-height:1.25;max-width:560px;transform:rotate(-1.2deg);display:flex;gap:16px;align-items:flex-start}
+.post.right{align-self:flex-end;transform:rotate(1deg)}
+.post svg{flex:none;width:58px;height:58px}
+.post small{display:block;font-family:var(--body);font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--coral);margin-bottom:4px}
+
+/* chart */
+.bars{display:flex;flex-direction:column;gap:9px}
+.bar{display:grid;grid-template-columns:minmax(120px,230px) 1fr 74px;gap:12px;align-items:center;font-size:.92rem}
+.bar .track{height:18px;background:var(--line);border-radius:4px;overflow:hidden;min-width:0}
+.bar .fill{height:100%;border-radius:4px}
+.fill.mx{background:var(--mx)}
+.fill.bs{background:var(--bs);background-image:repeating-linear-gradient(135deg,transparent 0 6px,rgba(255,255,255,.28) 6px 9px)}
+.bar .v{text-align:right;font-weight:800;font-variant-numeric:tabular-nums}
+.legend{display:flex;gap:18px;flex-wrap:wrap;font-size:.86rem;color:var(--muted)}
+.legend i{display:inline-block;width:14px;height:14px;border-radius:3px;vertical-align:-2px;margin-right:6px}
+
+/* st regis */
+.regis{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:26px}
+.regis > div{display:flex;flex-direction:column;gap:12px;min-width:0}
+.verdict{font-size:1.1rem;font-weight:600}
+ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px 32px}
+.cols > div{display:flex;flex-direction:column;gap:8px;min-width:0}
+.cols h3{font-size:1.2rem}
+.sources{font-size:.86rem;columns:2;column-gap:32px}
+.sources li{break-inside:avoid;margin-bottom:6px}
+footer{font-size:.86rem;color:var(--muted)}
+
+@media (max-width:760px){
+  .tiers,.regis{grid-template-columns:1fr}
+  .bar{grid-template-columns:1fr 70px}
+  .bar .track{grid-column:1 / -1;grid-row:2}
+  .post{font-size:1.3rem;transform:none}
+  .post.right{transform:none}
+  .sources{columns:1}
+}
+@media (prefers-reduced-motion:no-preference){
+  .boat{animation:bob 5s ease-in-out infinite}
+  @keyframes bob{50%{transform:translateY(4px)}}
+}
+
+/* ---- voting app ---- */
+:root{--on-sun:#12343f;--shadow:0 6px 18px rgba(11,95,115,.12)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--on-sun:#06202a;--shadow:0 6px 18px rgba(0,0,0,.4)}}
+:root[data-theme="dark"]{--on-sun:#06202a;--shadow:0 6px 18px rgba(0,0,0,.4)}
+button,select,input{font:inherit;color:inherit}
+button{cursor:pointer}
+button:focus-visible,select:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+
+.tools{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:12px 16px;display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center}
+.tools .grp{display:flex;align-items:center;gap:8px;flex-wrap:wrap;min-width:0}
+.tools .lab{font-size:.74rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.pill{border:1.5px solid var(--line);background:var(--bg);border-radius:999px;padding:6px 14px;font-weight:800;font-size:.92rem;display:inline-flex;align-items:center;gap:7px;min-height:38px}
+.pill[aria-pressed="true"]{background:var(--sea);border-color:var(--sea);color:var(--chip-ink)}
+.pill[aria-pressed="true"] .dot{border-color:var(--chip-ink)}
+.tools select{border:1.5px solid var(--line);background:var(--bg);border-radius:999px;padding:6px 12px;font-weight:700;min-height:38px}
+.tools.nudge{border-color:var(--coral);animation:nudge .5s}
+@keyframes nudge{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.status{font-size:.86rem;color:var(--muted);flex:1 1 180px;min-width:0;text-align:right}
+.dot{width:12px;height:12px;border-radius:50%;border:3px solid var(--sea);flex:none}
+.dot.v-win{border-color:var(--sea)}.dot.v-lindsay{border-color:var(--coral)}.dot.v-alaina{border-color:var(--sun)}.dot.v-charlotte{border-color:var(--palm)}
+
+.board{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:20px 32px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px 22px}
+.board h3{font-size:1.2rem;margin-bottom:10px}
+.rank{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px}
+.rank li{display:grid;grid-template-columns:22px minmax(0,1fr) auto;gap:4px 10px;align-items:center;font-size:.95rem}
+.rank .n{font-family:var(--display);font-size:1.15rem;color:var(--sea)}
+.rank .pts{font-weight:800;font-variant-numeric:tabular-nums}
+.rank .trk{grid-column:2 / -1;height:8px;background:var(--line);border-radius:4px;overflow:hidden}
+.rank .trk i{display:block;height:100%;background:var(--sea);border-radius:4px}
+.rank a{color:inherit;font-weight:700}
+.prog{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;font-size:.95rem}
+.prog li{display:flex;align-items:center;gap:9px}
+.prog b{font-variant-numeric:tabular-nums;margin-left:auto}
+.empty{color:var(--muted);max-width:46ch}
+
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.place{background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;min-width:0;scroll-margin-top:110px}
+.photo{position:relative;aspect-ratio:16/10;background:var(--sea-pale);max-width:100%}
+.photo img,.photo svg{width:100%;height:100%;object-fit:cover;display:block}
+.slides{display:flex;height:100%;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain}
+.slides::-webkit-scrollbar{display:none}
+.slide{flex:0 0 100%;height:100%;scroll-snap-align:start;scroll-snap-stop:always}
+.nav{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:0;background:var(--surface);color:var(--ink);font-size:1.6rem;line-height:1;padding:0 0 4px;box-shadow:var(--shadow)}
+.nav.prev{left:10px}.nav.next{right:10px}
+.nav:disabled{opacity:.3;cursor:default}
+.count{position:absolute;right:12px;top:12px;background:var(--surface);color:var(--ink);font-size:.76rem;font-weight:800;padding:4px 10px;border-radius:999px;font-variant-numeric:tabular-nums}
+.cap{padding:9px 20px 0;font-size:.84rem;line-height:1.4;min-height:3.3em}
+.cap .by{color:var(--muted);font-size:.76rem}
+.cap .by a{color:inherit}
+.tierlab{position:absolute;left:12px;top:12px;background:var(--surface);color:var(--ink);font-size:.74rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:999px}
+.tierlab.pick{background:var(--sun);color:var(--on-sun)}
+.nophoto{position:absolute;inset:auto 12px 12px 12px;background:var(--surface);color:var(--muted);font-size:.8rem;padding:5px 10px;border-radius:8px}
+.pbody{padding:12px 20px 20px;display:flex;flex-direction:column;gap:13px;min-width:0}
+.pbody .top{display:flex;justify-content:space-between;align-items:baseline;gap:6px 12px;flex-wrap:wrap}
+.meter{height:6px;background:var(--line);border-radius:3px;overflow:hidden}
+.meter i{display:block;height:100%;border-radius:3px;background:var(--mx)}
+.meter i.bs{background:var(--bs)}
+.rating{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;font-size:.9rem;color:var(--muted)}
+.rating .score{font-family:var(--display);font-size:1.5rem;color:var(--ink)}
+.rv{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 18px;font-size:.9rem}
+.rv h4{margin:0 0 4px;font-size:.74rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.rv ul{padding-left:17px;gap:3px}
+details{border-top:2px dashed var(--line);padding-top:10px}
+summary{font-weight:800;cursor:pointer;color:var(--sea)}
+details > div{display:flex;flex-direction:column;gap:12px;padding-top:10px}
+.place dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 12px;font-size:.93rem}
+.place dt{font-weight:800}.place dd{margin:0;min-width:0}
+.fine{font-size:.88rem;color:var(--muted)}
+.vote{border-top:2px dashed var(--line);padding-top:12px;display:flex;flex-direction:column;gap:10px}
+.vrow{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.vbtn{flex:1 1 76px;border:1.5px solid var(--line);background:var(--bg);border-radius:10px;padding:9px 8px;font-weight:800;min-height:44px}
+.vbtn[aria-pressed="true"][data-v="yes"]{background:var(--palm);border-color:var(--palm);color:var(--chip-ink)}
+.vbtn[aria-pressed="true"][data-v="maybe"]{background:var(--sun);border-color:var(--sun);color:var(--on-sun)}
+.vbtn[aria-pressed="true"][data-v="no"]{background:var(--coral);border-color:var(--coral);color:var(--chip-ink)}
+.vbtn:disabled,.note:disabled{opacity:.55;cursor:not-allowed}
+.note{width:100%;border:1.5px solid var(--line);background:var(--bg);border-radius:10px;padding:9px 12px;min-height:42px}
+.tally{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;font-size:.84rem}
+.tally div{display:flex;flex-direction:column;gap:2px;min-width:0}
+.tally .who{display:flex;align-items:center;gap:5px;font-weight:800;min-width:0}
+.tally .who span:last-child{overflow:hidden;text-overflow:ellipsis}
+.tally .pick{color:var(--muted)}
+.tally .pick.set{color:var(--ink);font-weight:700}
+.tally .said{font-family:var(--hand);font-size:1.1rem;line-height:1.1;overflow-wrap:anywhere}
+.credit{font-size:.74rem;color:var(--muted)}
+.credit a{color:inherit}
+
+@media (max-width:760px){
+  .grid,.board{grid-template-columns:1fr}
+  .rv{grid-template-columns:1fr}
+  .tally{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .status{text-align:left;flex-basis:100%}
+  .tools{padding:8px 10px;gap:6px 10px}
+  .tools .lab{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+  .tools .grp{flex:1 1 100%;flex-wrap:nowrap;gap:6px}
+  .tools .grp:first-child{overflow-x:auto}
+  .pill{padding:4px 10px;font-size:.86rem;min-height:36px;flex:none}
+  .tools select{flex:1 1 0;min-width:0;min-height:36px;font-size:.86rem}
+  .status{font-size:.8rem}
+  .place{scroll-margin-top:150px}
+}
+@media (prefers-reduced-motion:reduce){.tools.nudge{animation:none}}
+
+.where{font-size:.9rem;color:var(--muted)}
+.links{display:flex;flex-wrap:wrap;gap:8px}
+.lnk{display:inline-flex;align-items:center;min-height:36px;padding:5px 14px;border:1.5px solid var(--sea);border-radius:999px;font-weight:800;font-size:.86rem;text-decoration:none;color:var(--sea)}
+.lnk:hover{background:var(--sea);color:var(--chip-ink)}
+.maps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.mapfig{margin:0;display:flex;flex-direction:column;gap:8px;min-width:0;scroll-margin-top:120px}
+.mapfig.wide{grid-column:1 / -1}
+.mapfig img{width:100%;height:auto;display:block;border-radius:14px;border:1px solid var(--line)}
+.mapfig figcaption{font-weight:800;font-size:.95rem}
+@media (max-width:760px){.maps{grid-template-columns:1fr}}
+</style>
+
+<div class="wrap">
+
+<div class="hero">
+  <span class="eyebrow">Philadelphia to the beach &middot; March 21&ndash;27, 2027</span>
+  <h1>Spring break for four, plus one cat who is staying home</h1>
+  <p class="lead">Nine places across four price points for Easter week, for Win, Lindsay, Alaina and Charlotte. Every resort is a nonstop flight from PHL and under 50 minutes from the airport. No rental car in any of them.</p>
+
+  <svg class="scene" viewBox="0 0 1200 420" role="img" aria-label="A beach with a palm tree, a striped umbrella, four towels and a tabby cat in sunglasses">
+    <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" style="stop-color:var(--sky1)"/><stop offset="1" style="stop-color:var(--sky2)"/>
+      </linearGradient>
+    </defs>
+    <rect x="0" y="0" width="1200" height="420" fill="url(#sky)"/>
+    <circle cx="960" cy="105" r="54" style="fill:var(--sun)"/>
+    <!-- plane -->
+    <path d="M150 92 H330" fill="none" stroke-width="3" stroke-dasharray="3 10" stroke-linecap="round" style="stroke:var(--muted)"/>
+    <g style="fill:var(--sea-deep)">
+      <path d="M338 86 h44 q12 0 12 6 q0 6 -12 6 h-44 q-8 0 -8 -6 q0 -6 8 -6z"/>
+      <path d="M352 88 l-14 -18 h10 l22 18z M352 96 l-14 18 h10 l22 -18z M334 88 l-8 -10 h7 l9 10z"/>
+    </g>
+    <!-- sea -->
+    <rect x="0" y="210" width="1200" height="120" style="fill:var(--sea-deep)"/>
+    <path d="M0 240 q50 -14 100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 V340 H0z" style="fill:var(--sea)"/>
+    <path d="M0 278 q60 -16 120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 V350 H0z" style="fill:var(--sea-pale)"/>
+    <!-- boat -->
+    <g class="boat">
+      <path d="M640 222 h70 l-12 14 h-46z" style="fill:var(--coral)"/>
+      <path d="M676 220 V168 l30 50z" style="fill:var(--surface)"/>
+      <path d="M672 220 V178 l-22 40z" style="fill:var(--sun)"/>
+    </g>
+    <!-- sand -->
+    <path d="M0 318 q200 -34 420 -14 t420 6 t360 -10 V420 H0z" style="fill:var(--sand)"/>
+    <path d="M0 372 q300 -22 620 -6 t580 -8 V420 H0z" style="fill:var(--sand-deep)"/>
+    <!-- palm -->
+    <path d="M150 400 q-6 -120 44 -214" fill="none" stroke-width="18" stroke-linecap="round" style="stroke:var(--trunk)"/>
+    <g style="fill:var(--palm)">
+      <path d="M194 188 q-70 -50 -150 -6 q76 -10 150 6z"/>
+      <path d="M194 188 q-34 -86 -124 -92 q70 30 124 92z"/>
+      <path d="M194 188 q16 -92 100 -110 q-58 44 -100 110z"/>
+      <path d="M194 188 q74 -54 158 -14 q-80 -6 -158 14z"/>
+      <path d="M194 188 q68 -6 120 60 q-58 -44 -120 -60z"/>
+      <path d="M194 188 q-62 4 -104 74 q50 -52 104 -74z"/>
+    </g>
+    <circle cx="188" cy="196" r="9" style="fill:var(--trunk)"/><circle cx="204" cy="200" r="8" style="fill:var(--trunk)"/>
+    <!-- four towels -->
+    <g>
+      <rect x="390" y="352" width="78" height="30" rx="4" transform="rotate(-5 429 367)" style="fill:var(--coral)"/>
+      <rect x="486" y="356" width="78" height="30" rx="4" transform="rotate(3 525 371)" style="fill:var(--sea)"/>
+      <rect x="582" y="352" width="66" height="26" rx="4" transform="rotate(-4 615 365)" style="fill:var(--sun)"/>
+      <rect x="664" y="356" width="60" height="24" rx="4" transform="rotate(5 694 368)" style="fill:var(--palm)"/>
+    </g>
+    <!-- umbrella -->
+    <path d="M524 366 L548 214" fill="none" stroke-width="6" stroke-linecap="round" style="stroke:var(--trunk)"/>
+    <path d="M440 236 Q548 108 660 244 Q548 206 440 236z" style="fill:var(--coral)"/>
+    <path d="M500 220 Q528 150 548 152 Q548 190 548 212 Q522 212 500 220z" style="fill:var(--surface)"/>
+    <path d="M600 222 Q576 152 548 152 Q560 190 566 212 Q586 214 600 222z" style="fill:var(--surface)"/>
+    <!-- tabby cat -->
+    <g>
+      <path d="M896 386 q52 4 46 -52" fill="none" stroke-width="12" stroke-linecap="round" style="stroke:var(--tabby)"/>
+      <path d="M936 356 l10 -4 M930 372 l11 2" fill="none" stroke-width="4" stroke-linecap="round" style="stroke:var(--tabby-dark)"/>
+      <ellipse cx="866" cy="352" rx="36" ry="42" style="fill:var(--tabby)"/>
+      <path d="M838 338 q28 12 56 0 M836 356 q30 12 60 0 M842 374 q24 10 48 0" fill="none" stroke-width="5" stroke-linecap="round" style="stroke:var(--tabby-dark)"/>
+      <path d="M842 284 l4 -30 l20 20z M890 284 l-4 -30 l-20 20z" style="fill:var(--tabby)"/>
+      <circle cx="866" cy="296" r="28" style="fill:var(--tabby)"/>
+      <path d="M866 270 v12 M855 272 l3 10 M877 272 l-3 10" fill="none" stroke-width="4" stroke-linecap="round" style="stroke:var(--tabby-dark)"/>
+      <rect x="842" y="288" width="21" height="13" rx="5" style="fill:var(--sea-deep)"/>
+      <rect x="869" y="288" width="21" height="13" rx="5" style="fill:var(--sea-deep)"/>
+      <path d="M862 293 h8" stroke-width="3" style="stroke:var(--sea-deep)"/>
+      <path d="M862 308 h8 l-4 5z" style="fill:var(--coral)"/>
+      <path d="M852 312 l-20 -3 M852 316 l-19 5 M880 312 l20 -3 M880 316 l19 5" fill="none" stroke-width="2" stroke-linecap="round" style="stroke:var(--tabby-dark)"/>
+    </g>
+    <!-- starfish and shell -->
+    <path d="M1040 372 l6 14 l15 2 l-11 10 l3 15 l-13 -8 l-13 8 l3 -15 l-11 -10 l15 -2z" style="fill:var(--coral)"/>
+    <path d="M300 392 q14 -22 28 0 q-14 8 -28 0z" style="fill:var(--surface)"/>
+  </svg>
+
+  <div class="facts">
+    <div><b>6 nights</b><span>Sun Mar 21 to Sat Mar 27, home the day before Easter</span></div>
+    <div><b>Nonstop from PHL</b><span>American to Nassau (~3 hrs) and Canc&uacute;n (~4 hrs); Frontier to Canc&uacute;n</span></div>
+    <div><b>Same advisory level</b><span>Bahamas and Quintana Roo are both U.S. Level 2</span></div>
+    <div><b>Book by December</b><span>Easter week is also Mexico's Semana Santa</span></div>
+  </div>
+</div>
+
+<div class="post">
+  <svg viewBox="0 0 58 58" aria-hidden="true"><rect x="2" y="2" width="54" height="54" rx="4" fill="none" stroke-width="3" stroke-dasharray="5 4" style="stroke:var(--coral)"/><circle cx="29" cy="24" r="10" style="fill:var(--sun)"/><path d="M8 40 q10 -8 21 0 t21 0 v10 h-42z" style="fill:var(--sea)"/></svg>
+  <div><small>To Win and Lindsay</small>Grand Velas is all-inclusive and the Fairmont can be. Everywhere else you pay as you eat. The Bahamas places are the ones where you can leave the resort for a beach day.</div>
+</div>
+
+<svg class="wave" viewBox="0 0 1200 22" preserveAspectRatio="none" aria-hidden="true"><path d="M0 11 q25 -10 50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0" fill="none" stroke-width="3" style="stroke:var(--sea-pale)"/></svg>
+
+<section id="vote">
+  <span class="eyebrow">Family vote</span>
+  <h2>Nine places, four votes each</h2>
+  <p class="muted">Pick your name, then tap Yes, Maybe or No on each place. Tap the same button again to take a vote back. Yes is worth 2 points and Maybe is worth 1. Everyone sees the votes update live.</p>
+  <div class="board">
+    <div>
+      <h3>Family ranking</h3>
+      <ol class="rank" id="rank"></ol>
+      <p class="empty" id="rank-empty">No votes yet. The ranking fills in as soon as someone taps Yes or Maybe.</p>
+    </div>
+    <div>
+      <h3>Who has voted</h3>
+      <ul class="prog" id="prog"></ul>
+    </div>
+  </div>
+</section>
+
+<div class="tools" id="tools">
+  <div class="grp" role="group" aria-label="Who is voting">
+    <span class="lab">Who's voting?</span>
+    <button type="button" class="pill" data-me="win" aria-pressed="false"><span class="dot v-win"></span>Win</button>
+    <button type="button" class="pill" data-me="lindsay" aria-pressed="false"><span class="dot v-lindsay"></span>Lindsay</button>
+    <button type="button" class="pill" data-me="alaina" aria-pressed="false"><span class="dot v-alaina"></span>Alaina</button>
+    <button type="button" class="pill" data-me="charlotte" aria-pressed="false"><span class="dot v-charlotte"></span>Charlotte</button>
+  </div>
+  <div class="grp">
+    <label class="lab" for="sort">Sort</label>
+    <select id="sort">
+      <option value="price">Price, low to high</option>
+      <option value="rating">Guest rating</option>
+      <option value="votes">Family votes</option>
+    </select>
+    <label class="lab" for="where">Show</label>
+    <select id="where">
+      <option value="all">Everywhere</option>
+      <option value="mx">Mexico</option>
+      <option value="bs">Bahamas</option>
+    </select>
+  </div>
+  <span class="status" id="status" role="status" aria-live="polite">Loading votes…</span>
+</div>
+
+<section>
+  <div class="grid" id="grid"></div>
+  <p class="muted">Prices are for all four of you for six nights, March 21&ndash;27, 2027, on American nonstop fares. Hotel rates are my estimates until resorts publish Easter 2027 prices. Guest scores come from each listing's review page on October 11, 2026, and the likes and complaints are my summary of what reviewers said there.</p>
+</section>
+
+<section id="map">
+  <span class="eyebrow">Where everything is</span>
+  <h2>Two destinations, both a nonstop flight away</h2>
+  <p class="muted">The four Bahamas places sit on one small island, and the four Mexico resorts sit within a few miles of each other on the Riviera Maya. The three Atlantis hotels and Comfort Suites are all within about a 15-minute walk of one another on Paradise Island.</p>
+  <div class="maps">
+    <figure class="mapfig tall"><img src="img/map_overview.png" alt="Map of the eastern United States and Caribbean with flight lines from Philadelphia to Nassau, about 3 hours, and to Canc&uacute;n airport, about 4 hours" loading="lazy" width="760" height="959"><figcaption>From Philadelphia</figcaption></figure>
+    <figure class="mapfig tall" id="map-mexico"><img src="img/map_riviera.png" alt="Map of the Riviera Maya coast south of Canc&uacute;n airport showing The St. Regis Kanai, Mayakoba with Banyan Tree and Fairmont, and Grand Velas Riviera Maya clustered just north of Playa del Carmen, each about 45 minutes from the airport" loading="lazy" width="760" height="832"><figcaption>Mexico: the Riviera Maya</figcaption></figure>
+    <figure class="mapfig wide" id="map-bahamas"><img src="img/map_nassau.png" alt="Map of New Providence island showing Nassau airport, Grand Hyatt Baha Mar on Cable Beach 10 to 15 minutes away, and Atlantis and Comfort Suites on Paradise Island 25 to 30 minutes away, with downtown Nassau between them" loading="lazy" width="1100" height="543"><figcaption>Bahamas: Nassau and Paradise Island</figcaption></figure>
+  </div>
+</section>
+
+<div class="post right">
+  <svg viewBox="0 0 58 58" aria-hidden="true"><rect x="2" y="2" width="54" height="54" rx="4" fill="none" stroke-width="3" stroke-dasharray="5 4" style="stroke:var(--coral)"/><path d="M29 10 l5 13 l14 2 l-10 9 l3 14 l-12 -7 l-12 7 l3 -14 l-10 -9 l14 -2z" style="fill:var(--coral)"/></svg>
+  <div><small>To Alaina</small>You qualify for the teens' club at Grand Velas. You also count as an extra paying guest at Atlantis. Being 13 cuts both ways. Vote accordingly.</div>
+</div>
+
+<div class="post">
+  <svg viewBox="0 0 58 58" aria-hidden="true"><rect x="2" y="2" width="54" height="54" rx="4" fill="none" stroke-width="3" stroke-dasharray="5 4" style="stroke:var(--coral)"/><path d="M12 40 q17 -34 34 0 q-17 10 -34 0z" style="fill:var(--sand-deep)"/><path d="M29 20 v24 M20 28 l5 16 M38 28 l-5 16" fill="none" stroke-width="2" style="stroke:var(--tabby-dark)"/></svg>
+  <div><small>To Charlotte</small>You're free at Comfort Suites and on the kids' rate at Grand Velas, as long as you're still 11 on check-in day. If your birthday lands before March 21, tell Dad.</div>
+</div>
+
+<section>
+  <span class="eyebrow">Bahamas only</span>
+  <h2>Leaving the resort in Nassau</h2>
+  <div class="cols">
+    <div><h3>Fine to walk by day</h3><ul><li>Paradise Island between Atlantis, Marina Village and Cabbage Beach</li><li>The Cable Beach strip around Baha Mar</li><li>Bay Street and downtown in daylight</li></ul></div>
+    <div><h3>Skip</h3><ul><li>The area south of Shirley Street, named in the U.S. advisory</li><li>Walking anywhere off-resort after dark; take a licensed taxi</li><li>Jet-ski and boat vendors on public beaches</li></ul></div>
+    <div><h3>Beach days and trips</h3><ul><li>Blue Lagoon Island: dolphins, sea lions, beach</li><li>Rose Island snorkeling</li><li>Exuma swimming pigs, a full day by boat or plane</li><li>Stuart Cove's for snorkeling and diving</li></ul></div>
+    <div><h3>Dinner nearby</h3><ul><li>Marina Village for casual nights</li><li>Graycliff downtown for one big dinner</li><li>Arawak Cay fish fry for conch, by taxi, before dark</li></ul></div>
+  </div>
+</section>
+
+<section>
+  <span class="eyebrow">Before you book</span>
+  <h2>The practical list</h2>
+  <div class="cols">
+    <div><h3>Passports</h3><p>Both girls need passport books. Both are under 16, so both parents sign and the application is in person. Child passports last 5 years, so check the dates on any they already hold.</p></div>
+    <div><h3>Timing</h3><p>Buy flights by November or December. There is one American nonstop a day to Nassau, and its cheap seats go first. Book refundable hotel rates now and re-check them.</p></div>
+    <div><h3>Seaweed</h3><p>2026 was a heavy sargassum year on Mexico's Caribbean coast. All four Mexico resorts sit near Playa del Carmen, where it tends to be heavier. Nassau is essentially clear.</p></div>
+    <div><h3>Water and weather</h3><p>Riviera Maya: mid-80s, sea about 78&ndash;80&deg;F. Nassau: around 80, sea about 75&ndash;77&deg;F.</p></div>
+    <div><h3>Fees to expect</h3><p>Mexico: visitor tax of about $16 a person. Bahamas: 20&ndash;21% room tax, $76&ndash;83 nightly resort fees, and 10% VAT plus 15% gratuity on restaurant checks.</p></div>
+    <div><h3>Not in any total</h3><p>Parking at PHL, travel insurance and the cat sitter.</p></div>
+  </div>
+</section>
+
+<div class="post right">
+  <svg viewBox="0 0 58 58" aria-hidden="true"><rect x="2" y="2" width="54" height="54" rx="4" fill="none" stroke-width="3" stroke-dasharray="5 4" style="stroke:var(--coral)"/><path d="M15 22 l3 -12 l9 8z M43 22 l-3 -12 l-9 8z" style="fill:var(--tabby)"/><circle cx="29" cy="30" r="15" style="fill:var(--tabby)"/><path d="M29 16 v7 M23 17 l2 6 M35 17 l-2 6" fill="none" stroke-width="2.5" stroke-linecap="round" style="stroke:var(--tabby-dark)"/><circle cx="23" cy="29" r="2.5" style="fill:var(--ink)"/><circle cx="35" cy="29" r="2.5" style="fill:var(--ink)"/><path d="M27 35 h4 l-2 3z" style="fill:var(--coral)"/></svg>
+  <div><small>To the tabby</small>You don't get a vote and you are not coming. You would hate the plane, the sand and the ocean, in that order. Guard the house. Six nights, then we're back.</div>
+</div>
+
+<section>
+  <span class="eyebrow">Where the numbers come from</span>
+  <ul class="sources">
+    <li><a href="https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Bahamas.html">U.S. State Department: Bahamas</a></li>
+    <li><a href="https://travel.state.gov/en/international-travel/travel-advisories/mexico.html">U.S. State Department: Mexico</a></li>
+    <li><a href="https://www.aa.com/en-us/flights-from-philadelphia-to-cancun">American Airlines: PHL to Canc&uacute;n</a></li>
+    <li><a href="https://flights.flyfrontier.com/en/flights-from-philadelphia-to-cancun">Frontier: PHL to Canc&uacute;n</a></li>
+    <li><a href="https://www.flightsfrom.com/PHL-NAS">FlightsFrom: PHL to Nassau</a></li>
+    <li><a href="https://www.hyatt.com/grand-hyatt/en-US/nasgh-grand-hyatt-baha-mar">Grand Hyatt Baha Mar</a></li>
+    <li><a href="https://www.atlantisbahamas.com/faq">Atlantis FAQ: fees and age charges</a></li>
+    <li><a href="https://www.comfortsuitespi.com/">Comfort Suites Paradise Island</a></li>
+    <li><a href="https://rivieramaya.grandvelas.com/newsroom/hotel/book-now-for-summer-travel">Grand Velas Riviera Maya rates</a></li>
+    <li><a href="https://booking.usa-transfers.com/cancun-airport-transfers">USA Transfers: Canc&uacute;n airport</a></li>
+    <li><a href="https://www.hopbahamas.com/blog/nassau-taxi-cost-guide-2026">Nassau taxi fares</a></li>
+    <li><a href="https://www.costcotravel.com/Hotels/Mexico/Riviera-Maya/RivieraMayaStRegisKanai">Costco Travel: St. Regis Kanai</a></li>
+    <li><a href="https://onemileatatime.com/reviews/st-regis-kanai-riviera-maya/">One Mile at a Time: St. Regis Kanai review</a></li>
+    <li><a href="https://www.travelocity.com/Playa-Del-Carmen-Hotels-The-St-Regis-Kanai-Resort.h88203504.Hotel-Information">Travelocity: St. Regis Kanai</a></li>
+    <li><a href="https://www.howisthesargassum.com/forecast">Sargassum forecast</a></li>
+  <li><a href="https://www.kayak.com/Nassau-Hotels-Comfort-Suites-Paradise-Island.19890.ksp">Kayak: Comfort Suites Paradise Island reviews</a></li>
+    <li><a href="https://www.kayak.com/Nassau-Hotels-The-Coral-at-Atlantis-Autograph-Collection.602811.ksp">Kayak: Atlantis, The Coral reviews</a></li>
+    <li><a href="https://www.kayak.com/Nassau-Hotels-The-Royal-at-Atlantis.71350.ksp">Kayak: Atlantis, The Royal reviews</a></li>
+    <li><a href="https://www.kayak.com/Nassau-Hotels-Grand-Hyatt-Baha-Mar.739807.ksp">Kayak: Grand Hyatt Baha Mar reviews</a></li>
+    <li><a href="https://www.kayak.com/Nassau-Hotels-The-Cove-at-Atlantis.209125.ksp">Kayak: The Cove at Atlantis reviews</a></li>
+    <li><a href="https://www.kayak.com/Playa-del-Carmen-Hotels-Grand-Velas-Riviera-Maya.198746.ksp">Kayak: Grand Velas Riviera Maya reviews</a></li>
+    <li><a href="https://www.travelocity.com/Playa-Del-Carmen-Hotels-The-St-Regis-Kanai-Resort.h88203504.Hotel-Information">Travelocity: The St. Regis Kanai reviews</a></li>
+    <li><a href="https://www.kayak.com/Playa-del-Carmen-Hotels-Banyan-Tree-Mayakoba.202939.ksp">Kayak: Banyan Tree Mayakoba reviews</a></li>
+    <li><a href="https://www.kayak.com/Playa-del-Carmen-Hotels-Fairmont-Mayakoba.134956.ksp">Kayak: Fairmont Mayakoba reviews</a></li>
+    <li><a href="https://www.fairmont.com/mayakoba-riviera-maya/">Fairmont Mayakoba</a></li><li><a href="https://www.fairmont.com/en/hotels/riviera-maya/fairmont-mayakoba/offers/all-inclusive-package.html">Fairmont Mayakoba: all-inclusive package</a></li><li><a href="https://www.cheapcaribbean.com/resorts/fairmont-mayakoba-all-inclusive/">CheapCaribbean: Fairmont Mayakoba</a></li><li><a href="https://www.banyantree.com/mexico/mayakoba/accommodation">Banyan Tree Mayakoba: suites and villas</a></li><li><a href="https://www.banyantree.com/mexico/mayakoba/offers">Banyan Tree Mayakoba: offers and taxes</a></li><li><a href="https://luxerecess.com/banyan-tree-mayakoba-resort-mexico/">Luxe Recess: Banyan Tree Mayakoba with kids</a></li><li><a href="https://www.jetsetchristina.com/where-to-stay-in-mayakoba-mexico-rosewood-vs-fairmont-vs-andaz-vs-banyan-tree/">Jetset Christina: the four Mayakoba hotels</a></li><li><a href="https://www.hotels.com/ho279248/banyan-tree-mayakoba-playa-del-carmen-mexico/">Hotels.com: Banyan Tree Mayakoba</a></li></ul>
+  <footer>Prepared October 11, 2026. Photos are freely licensed images from Wikimedia Commons and Flickr, each credited under the picture. Maps are drawn from GSHHG coastline data. Hotel prices are estimates until resorts publish Easter 2027 rates. Check advisories again before you fly.</footer>
+</section>
+
+</div>
+<script>
+(function(){
+"use strict";
+var PLACES=[{"id": "comfort", "name": "Comfort Suites Paradise Island", "country": "bs", "tier": "Value pick", "pick": true, "plan": "Breakfast included", "transfer": "25–30 min from NAS", "imgAlt": "Turquoise water and white sand at Cabbage Beach on Paradise Island", "imgNote": "Cabbage Beach, a short walk away, not the hotel", "rating": {"score": 7.6, "count": 3153, "src": "Kayak", "url": "https://www.kayak.com/Nassau-Hotels-Comfort-Suites-Paradise-Island.19890.ksp"}, "likes": ["Full use of the Atlantis water park next door", "Location near the beach and downtown", "The free breakfast"], "gripes": ["Dated rooms, some with musty smells", "Slow service and housekeeping", "Surprise charges and patchy Wi-Fi"], "rows": [["Flights for 4, American nonstop", 3200], ["Suite, 6 nights at ~$400 with taxes and fees", 2400], ["Licensed taxi both ways", 140], ["Food beyond breakfast, about $275 a day", 1650], ["Activities", 400]], "eat": "Breakfast at the hotel. Lunch and dinner at Atlantis or Marina Village, where checks add 10% VAT and 15% gratuity.", "todo": "Atlantis water park, beaches and marine habitat from check-in to checkout. Cabbage Beach is a short walk.", "note": "Kids 11 and under stay free, so Charlotte counts only if she is still 11 at check-in.", "site": "https://www.comfortsuitespi.com/", "where": "On Paradise Island, beside The Coral", "photos": [{"src": "img/g_dl_comfort_8.jpg", "cap": "Cabbage Beach, a short walk from the hotel. Not the hotel itself.", "by": "Coolcaesar", "lic": "CC BY 4.0", "via": "Wikimedia Commons", "url": "https://commons.wikimedia.org/wiki/File:Cabbage_Beach,_Bahamas.jpg"}, {"src": "img/g_dl5_comfort_01.jpg", "cap": "Cabbage Beach", "by": "lakewentworth", "lic": "CC BY-NC 2.0", "via": "Flickr", "url": "https://www.flickr.com/photos/50619629@N00/3075486055"}, {"src": "img/g_dl5_comfort_07.jpg", "cap": "Cabbage Beach from the dunes", "by": "Tryandig", "lic": "CC BY-SA 2.0", "via": "Flickr", "url": "https://www.flickr.com/photos/60881589@N00/17072356211"}, {"src": "img/g_dl3_atlantis_00.jpg", "cap": "The whole Atlantis resort from the harbor, 2024", "by": "Larry D. Moore", "lic": "CC BY 4.0", "via": "Wikimedia Commons", "url": "https://commons.wikimedia.org/wiki/File:Atlantis_Paradise_Island_Bahamas_2024.jpg"}, {"src": "img/g_dl3_atlantis_09.jpg", "cap": "Atlantis water park: the river rapids ride", "by": "Don Ramey Logan", "lic": "CC BY-SA 3.0", "via": "Wikimedia Commons", "url": "https://commons.wikimedia.org/wiki/File:Rapids_Atlantis_Paradise_Island_photo_Don_Ramey_Logan.jpg"}, {"src": "img/g_dl4_atlantis_05.jpg", "cap": "Atlantis water park: the Mayan Temple slides", "by": "pause.reflect", "lic": "CC BY 2.0", "via": "Flickr", "url": "https://www.flickr.com/photos/83476006@N07/8721697548"}, {"src": "img/g_dl3_atlantis_18.jpg", "cap": "Atlantis water park: the kids' splash fort", "by": "Don Ramey Logan", "lic": "CC BY-SA 3.0", "via": "Wikimedia Commons", "url": "https://commons.wikimedia.org/wiki/File:Kids_Pool_Atlantis_Paradise_Island_photo_Don_Ramey_Logan.jpg"}, {"src": "img/g_dl3_atlantis_02.jpg", "cap": "One of the Atlantis pools", "by": "Don Ramey Logan", "lic": "CC BY-SA 3.0", "via": "Wikimedia Commons", "url": "https://commons.wikimedia.org/wiki/File:Atlantis_Paradise_Island_pool_photo_Don_Ramey_Logan.jpg"}, {"src": "img/g_dl3_atlantis_31.jpg", "cap": "The glass tunnel through the Atlantis aquarium", "by": "Don Ramey Logan", "lic": "CC BY-SA 3.0", "via": "Wikimedia Commons", "url": "https://commons.wikimedia.org/wiki/File:Underwater_walkways_Atlantis_resort_photo_Don_Ramey_Logan.jpg"}, {"src": "img/g_dl3_atlantis_40.jpg", "cap": "The Dig aquarium at Atlantis, with a manta ray passing", "by": "JERRYE AND ROY KLOTZ MD", "lic": "CC BY-SA 3.0", "via": "Wikimedia Commons", "url": "https://commons.wikimedia.org/wiki/File:LOWER_LEVEL_AQUARIUM,_ATLANTIS_HOTEL,_NASSAU.jpg"}]}, {"id": "coral", "name": "Atlantis, The Coral", "country": "bs", "tier": "Mid-range pick", "pick": true, "plan": "Pay as you eat", "transfer": "25–30 min from NAS", "imgAlt": "The Coral Towers at Atlantis seen across a lagoon", "rating": {"score": 7.8, "count": 943, "src": "Kayak", "url": "https://www.kayak.com/Nassau-Hotels-The-Coral-at-Atlantis-Autograph-Collection.602811.ksp"}, "likes": ["Warm, professional staff", "Full access to the water park", "The beaches and aquariums"], "gripes": ["High food prices and added fees", "Rooms that feel dated", "Uneven cleanliness"], "rows": [["Flights for 4, American nonstop", 3200], ["Room, 6 nights at ~$800", 4800], ["Taxes (21%), resort fee, gratuities", 1596], ["Extra-guest charge for Alaina (12 and up)", 450], ["Licensed taxi both ways", 140], ["Food, about $300 a day", 1800], ["Activities", 400]], "eat": "About 40 places to eat across Atlantis, plus Marina Village.", "todo": "141-acre water park with 11 slides and a mile-long river, plus the marine habitat.", "note": "", "site": "https://www.atlantisbahamas.com/rooms/coraltowers", "where": "On Paradise Island, at the east end of Atlantis", "photos": [{"src": "img/g_dl_coral_0.jpg", "cap": "The Coral towers across the lagoon", "by": "Don Ramey Logan", "lic": "CC BY-SA 3.0", "via": "Wikimedia Commons", "url": "https://commons.wikimedia.org/wiki/File:Coral_Towers_Atlantis_Paradise_Island_photo_Don_Ramey_Logan.jpg"}, {"src": "img/g_dl3_atlantis_00.jpg", "cap": "The whole Atlantis resort from the harbor, 2024", "by": "Larry D. Moore", "lic": "CC BY 4.0", "via": "Wikimedia Commons", "url": "https://commons.wikimedia.org/wiki/File:Atlantis_Paradise_Island_Bahamas_2024.jpg"}, {"src": "img/g_dl3_atlantis_09.jpg", "cap": "Atlantis water park: the river rapids ride", "by": "Don Ramey Logan", "lic": "CC BY-SA 3.0", "via": "Wikimedia Commons", "url": "https://commons.wikimedia.org/wiki/File:Rapids_Atlantis_Paradise_Island_photo_Don_Ramey_Logan.jpg"}, {"src": "img/g_dl4_atlantis_05.jpg", "cap": "Atlantis water park: the Mayan Temple slides", "by": "pause.reflect", "lic": "CC BY 2.0", "via": "Flickr", "url": "https://www.flickr.com/photos/83476006@N07/8721697548"}, {"src": "img/g_dl3_atlantis_18.jpg", "cap": "Atlantis water park: the kids' splash fort", "by": "Don Ramey Logan", "lic": "CC BY-SA 3.0", "via": "Wikimedia Commons", "url": "https://commons.wikimedia.org/wiki/File:Kids_Pool_Atlantis_Paradise_Island_photo_Don_Ramey_Logan.jpg"}, {"src": "img/g_dl3_atlantis_02.jpg", "cap": "One of the Atlantis pools", "by": "Don Ramey Logan", "lic": "CC BY-SA 3.0", "via": "Wikimedia Commons", "url": "https://commons.wikimedia.org/wiki/File:Atlantis_Paradise_Island_pool_photo_Don_Ramey_Logan.jpg"}, {"src": "img/g_dl3_atlantis_17.jpg", "cap": "Pool deck under the palms at Atlantis", "by": "Der-wuppertaler", "lic": "CC BY-SA 3.0", "via": "Wikimedia Commons", "url": "https://commons.wikimedia.org/wiki/File:BHA_Nassau,_Paradise_Island,_Atlantis_Resort_001.jpg"}, {"src": "img/g_dl3_atlantis_10.jpg", "cap": "Rope bridge over the Atlantis lagoon", "by": "Don Ramey Logan", "lic": "CC BY-SA 3.0", "via": "Wikimedia Commons", "url": "https://commons.wikimedia.org/wiki/File:Royal_Tower_Atlantis_Paradise_Island_photo_Don_Ramey_Logan.jpg"}, {"src": "img/g_dl4_atlantis_04.jpg", "cap": "The swimming lagoon at Atlantis", "by": "heather0714", "lic": "CC BY 2.0", "via": "Flickr", "url": "https://www.flickr.com/photos/34018978@N00/217214953"}, {"src": "img/g_dl3_atlantis_31.jpg", "cap": "The glass tunnel through the Atlantis aquarium", "by": "Don Ramey Logan", "lic": "CC BY-SA 3.0", "via": "Wikimedia Commons", "url": "https://commons.wikimedia.org/wiki/File:Underwater_walkways_Atlantis_resort_photo_Don_Ramey_Logan.jpg"}, {"src": "img/g_dl3_atlantis_40.jpg", "cap": "The Dig aquarium at Atlantis, with a manta ray passing", "by": "JERRYE AND ROY KLOTZ MD", "lic": "CC BY-SA 3.0", "via": "Wikimedia Commons", "url": "https://commons.wikimedia.org/wiki/File:LOWER_LEVEL_AQUARIUM,_ATLANTIS_HOTEL,_NASSAU.jpg"}, {"src": "img/g_dl3_atlantis_13.jpg", "cap": "An aquarium tank at Atlantis", "by": "Don Ramey Logan", "lic": "CC BY-SA 3.0", "via": "Wikimedia Commons", "url": "https://commons.wikimedia.org/wiki/File:Fish_tank_Atlantis_Paradise_Island_Photo_Don_Ramey_Logan.jpg"}, {"src": "img/g_dl3_atlantis_14.jpg", "cap": "The Atlantis marina", "by": "Don Ramey Logan", "lic": "CC BY-SA 3.0", "via": "Wikimedia Commons", "url": "https://commons.wikimedia.org/wiki/File:Atlantis_Paradise_Island_marina_photo_Don_Ramey_Logan.jpg"}, {"src": "img/g_dl3_atlantis_11.jpg", "cap": "The main lobby, in The Royal", "by": "Don Ramey Logan", "lic": "CC BY-SA 3.0", "via": "Wikimedia Commons", "url": "https://commons.wikimedia.org/wiki/File:Lobby_Atlantis_Paradise_Island_photo_Don_Ramey_Logan.jpg"}, {"src": "img/g_dl5_rooms_05.jpg", "cap": "Garden and lagoon view from an Atlantis room (guest photo, tower not named)", "by": "bolinhanyc", "lic": "CC BY-NC 2.0", "via": "Flickr", "url": "https://www.flickr.com/photos/27927119@N00/4946700845"}]}, {"id": "royal", "name": "Atlantis, The Royal", "country": "bs", "tier": "Upscale alternate", "pick": false, "plan": "Pay as you eat", "transfer": "25–30 min from NAS", "imgAlt": "The Royal Towers at Atlantis above a pool lined with palms", "rating": {"score": 7.9, "count": 1611, "src": "Kayak", "url": "https://www.kayak.com/Nassau-Hotels-The-Royal-at-Atlantis.71350.ksp"}, "likes": ["The pools and the beach", "Restaurant food", "The water park"], "gripes": ["Inconsistent service", "A gratuity added to every bill", "Uncomfortable beds, for some"], "rows": [["Flights for 4, American nonstop", 3200], ["Room, 6 nights at ~$779 plus taxes and fees", 7150], ["Licensed taxi both ways", 140], ["Food, about $300 a day", 1800], ["Activities", 400]], "eat": "The same 40 or so Atlantis restaurants, with the casino and main lobby downstairs.", "todo": "The iconic tower, closest to the water park and the aquarium.", "note": "The $779 rate is what Atlantis quoted for mid-March 2027. Easter week is likely higher, and Alaina may add an extra-guest charge as at The Coral.", "site": "https://www.atlantisbahamas.com/rooms/royaltowers", "where": "On Paradise Island, at the center of Atlantis", "photos": [{"src": "img/g_dl_royal_4.jpg", "cap": "The Royal towers above the pool", "by": "Bohao Zhao", "lic": "CC BY 3.0", "via": "Wikimedia Commons", "url": "https://commons.wikimedia.org/wiki/File:Atlantis_Paradise_Island_Royal_Towers_-_panoramio.jpg"}, {"src": "img/g_dl3_atlantis_01.jpg", "cap": "The Royal towers from above", "by": "Don Ramey Logan", "lic": "CC BY-SA 3.0", "via": "Wikimedia Commons", "url": "https://commons.wikimedia.org/wiki/File:The_Royal_Tower_Atlantis_Paradise_Island_photo_Don_Ramey_Logan.jpg"}, {"src": "img/g_dl3_atlantis_37.jpg", "cap": "The Royal from the lagoon beach", "by": "Original uploader was user:Drumguy8800 a", "lic": "CC BY-SA 3.0", "via": "Wikimedia Commons", "url": "https://commons.wikimedia.org/wiki/File:Atlantis_Paradise_Island_Hotel_edit.jpg"}, {"src": "img/g_dl5_rooms_03.jpg", "cap": "The bridge suite linking the two Royal towers", "by": "Thomas Hawk", "lic": "CC BY-NC 2.0", "via": "Flickr", "url": "https://www.flickr.com/photos/51035555243@N01/6057241515"}, {"src": "img/g_dl3_atlantis_11.jpg", "cap": "The main lobby, in The Royal", "by": "Don Ramey Logan", "lic": "CC BY-SA 3.0", "via": "Wikimedia Commons", "url": "https://commons.wikimedia.org/wiki/File:Lobby_Atlantis_Paradise_Island_photo_Don_Ramey_Logan.jpg"}, {"src": "img/g_dl4_atlantis_47.jpg", "cap": "The lobby dome", "by": "jikatu", "lic": "CC BY-SA 2.0", "via": "Flickr", "url": "https://www.flickr.com/photos/7221539@N06/5743849392"}, {"src": "img/g_dl4_atlantis_53.jpg", "cap": "Lobby windows looking into the aquarium", "by": "Thomas Hawk", "lic": "CC BY-NC 2.0", "via": "Flickr", "url": "https://www.flickr.com/photos/51035555243@N01/52587775717"}, {"src": "img/g_dl3_atlantis_43.jpg", "cap": "The pools and lagoons seen from a Royal room", "by": "Fred Hsu (Wikipedia:Fredhsu on en.wikipe", "lic": "CC BY-SA 3.0", "via": "Wikimedia Commons", "url": "https://commons.wikimedia.org/wiki/File:View_of_Aquarium_and_Pools_from_Royal_Tower_Rooms_Atlantis_3.jpg"}, {"src": "img/g_dl3_atlantis_44.jpg", "cap": "Looking down on the aquarium lagoon from a Royal room", "by": "Fred Hsu (Wikipedia:Fredhsu on en.wikipe", "lic": "CC BY-SA 3.0", "via": "Wikimedia Commons", "url": "https://commons.wikimedia.org/wiki/File:View_of_Aquarium_and_Pools_from_Royal_Tower_Rooms_Atlantis_2.jpg"}, {"src": "img/g_dl4_atlantis_52.jpg", "cap": "The lagoon beach in front of The Royal", "by": "Nugget04", "lic": "CC BY 2.0", "via": "Flickr", "url": "https://www.flickr.com/photos/76932863@N00/114763219"}, {"src": "img/g_dl3_atlantis_09.jpg", "cap": "Atlantis water park: the river rapids ride", "by": "Don Ramey Logan", "lic": "CC BY-SA 3.0", "via": "Wikimedia Commons", "url": "https://commons.wikimedia.org/wiki/File:Rapids_Atlantis_Paradise_Island_photo_Don_Ramey_Logan.jpg"}, {"src": "img/g_dl4_atlantis_05.jpg", "cap": "Atlantis water park: the Mayan Temple slides", "by": "pause.reflect", "lic": "CC BY 2.0", "via": "Flickr", "url": "https://www.flickr.com/photos/83476006@N07/8721697548"}, {"src": "img/g_dl3_atlantis_18.jpg", "cap": "Atlantis water park: the kids' splash fort", "by": "Don Ramey Logan", "lic": "CC BY-SA 3.0", "via": "Wikimedia Commons", "url": "https://commons.wikimedia.org/wiki/File:Kids_Pool_Atlantis_Paradise_Island_photo_Don_Ramey_Logan.jpg"}, {"src": "img/g_dl3_atlantis_31.jpg", "cap": "The glass tunnel through the Atlantis aquarium", "by": "Don Ramey Logan", "lic": "CC BY-SA 3.0", "via": "Wikimedia Commons", "url": "https://commons.wikimedia.org/wiki/File:Underwater_walkways_Atlantis_resort_photo_Don_Ramey_Logan.jpg"}, {"src": "img/g_dl3_atlantis_40.jpg", "cap": "The Dig aquarium at Atlantis, with a manta ray passing", "by": "JERRYE AND ROY KLOTZ MD", "lic": "CC BY-SA 3.0", "via": "Wikimedia Commons", "url": "https://commons.wikimedia.org/wiki/File:LOWER_LEVEL_AQUARIUM,_ATLANTIS_HOTEL,_NASSAU.jpg"}, {"src": "img/g_dl3_atlantis_13.jpg", "cap": "An aquarium tank at Atlantis", "by": "Don Ramey Logan", "lic": "CC BY-SA 3.0", "via": "Wikimedia Commons", "url": "https://commons.wikimedia.org/wiki/File:Fish_tank_Atlantis_Paradise_Island_Photo_Don_Ramey_Logan.jpg"}, {"src": "img/g_dl3_atlantis_14.jpg", "cap": "The Atlantis marina", "by": "Don Ramey Logan", "lic": "CC BY-SA 3.0", "via": "Wikimedia Commons", "url": "https://commons.wikimedia.org/wiki/File:Atlantis_Paradise_Island_marina_photo_Don_Ramey_Logan.jpg"}, {"src": "img/g_dl4_atlantis_11.jpg", "cap": "Atlantis at night", "by": "binarystatic", "lic": "CC BY-NC-SA 2.0", "via": "Flickr", "url": "https://www.flickr.com/photos/78755128@N00/3210454125"}, {"src": "img/g_dl3_atlantis_00.jpg", "cap": "The whole Atlantis resort from the harbor, 2024", "by": "Larry D. Moore", "lic": "CC BY 4.0", "via": "Wikimedia Commons", "url": "https://commons.wikimedia.org/wiki/File:Atlantis_Paradise_Island_Bahamas_2024.jpg"}]}, {"id": "bahamar", "name": "Grand Hyatt Baha Mar", "country": "bs", "tier": "Upscale pick", "pick": true, "plan": "Pay as you eat", "transfer": "10–15 min from NAS", "imgAlt": "The Baha Mar resort towers behind palm trees in Nassau", "rating": {"score": 8.1, "count": 1804, "src": "Kayak", "url": "https://www.kayak.com/Nassau-Hotels-Grand-Hyatt-Baha-Mar.739807.ksp"}, "likes": ["Pools, beach and entertainment", "The location, minutes from the airport", "Breakfast and the range of restaurants"], "gripes": ["Slow or unfriendly service at many outlets", "Housekeeping lapses", "High food prices and paid extras"], "rows": [["Flights for 4, American nonstop", 3200], ["Two queens, 6 nights at ~$1,000", 6000], ["Hotel taxes (20%) and resort fee", 1702], ["Licensed taxi both ways", 80], ["Food, about $350 a day", 2100], ["Activities and one day trip", 800]], "eat": "Dozens of restaurants, food trucks and beach grills across the three Baha Mar hotels.", "todo": "Baha Bay water park is included: wave pool, lazy river, slides, surf simulator. Six pools and Cable Beach.", "note": "Ask whether the 15% service fee applies to the room. If it does, add about $900.", "site": "https://www.hyatt.com/grand-hyatt/en-US/nasgh-grand-hyatt-baha-mar", "where": "On Cable Beach, between the airport and downtown", "photos": [{"src": "img/g_dl_bahamar_0.jpg", "cap": "The Baha Mar towers from the entrance road", "by": "Adog104", "lic": "CC BY-SA 4.0", "via": "Wikimedia Commons", "url": "https://commons.wikimedia.org/wiki/File:Baha_Mar_Resort_located_in_Nassau,_Bahamas.jpg"}, {"src": "img/g_dl3_bahamar_08.jpg", "cap": "Baha Mar across the water", "by": "Oscar Flowers", "lic": "CC BY-SA 3.0", "via": "Wikimedia Commons", "url": "https://commons.wikimedia.org/wiki/File:Cable_Beach_SkyLine_-_panoramio.jpg"}, {"src": "img/g_dl3_bahamar_01.jpg", "cap": "Baha Mar reflected in the lake behind it", "by": "Oscar Flowers", "lic": "CC BY-SA 3.0", "via": "Wikimedia Commons", "url": "https://commons.wikimedia.org/wiki/File:Reflection_-_panoramio_(57).jpg"}, {"src": "img/g_dl5_bahamar_22.jpg", "cap": "Cable Beach, the beach Baha Mar faces (older area photo)", "by": "Bert van Dijk", "lic": "CC BY-NC-SA 2.0", "via": "Flickr", "url": "https://www.flickr.com/photos/75478114@N00/435429111"}, {"src": "img/g_dl5_bahamar_09.jpg", "cap": "Cable Beach from a neighboring hotel (older area photo)", "by": "TravelingOtter", "lic": "CC BY-SA 2.0", "via": "Flickr", "url": "https://www.flickr.com/photos/14146962@N07/2955012503"}, {"src": "img/g_dl5_bahamar_14.jpg", "cap": "The water off Cable Beach (older area photo)", "by": "TravelingOtter", "lic": "CC BY-SA 2.0", "via": "Flickr", "url": "https://www.flickr.com/photos/14146962@N07/2955864510"}, {"src": "img/g_dl5_bahamar_20.jpg", "cap": "Sunset from Cable Beach (area photo)", "by": "Swantho", "lic": "CC BY-NC 2.0", "via": "Flickr", "url": "https://www.flickr.com/photos/28611330@N06/2670252258"}]}, {"id": "cove", "name": "The Cove at Atlantis", "country": "bs", "tier": "Luxury pick", "pick": true, "plan": "Pay as you eat", "transfer": "25–30 min from NAS", "imgAlt": "Aerial view of The Cove at Atlantis between two turquoise bays", "rating": {"score": 7.4, "count": 434, "src": "Kayak", "url": "https://www.kayak.com/Nassau-Hotels-The-Cove-at-Atlantis.209125.ksp"}, "likes": ["The location between two beaches", "The pool areas", "Large rooms"], "gripes": ["Slow, unfriendly service", "Poor value: pricey food, drinks and add-ons", "A sprawling layout and long waits for meals"], "rows": [["Flights for 4, American nonstop", 3200], ["Suite, 6 nights at ~$1,400", 8400], ["Taxes (21%), resort fee, gratuities", 2451], ["Teen charge for Alaina (12–17)", 300], ["Private SUV both ways", 150], ["Food, about $500 a day", 3000], ["Activities and day trips", 1500]], "eat": "Nobu, Café Martinique and Fish by José Andrés on site. Dune at the Ocean Club is a short taxi away.", "todo": "Cove-only pools, plus all of Atlantis: water park, river, marine habitat.", "note": "Lowest guest score of the nine, and the complaints are about value. Read recent reviews before paying this much.", "site": "https://www.atlantisbahamas.com/rooms/thecoveatlantis", "where": "On Paradise Island, at the west end of Atlantis", "photos": [{"src": "img/g_dl_cove_0.jpg", "cap": "The Cove and its two bays from the air", "by": "ParsonsPhotographyNL", "lic": "CC BY-SA 4.0", "via": "Wikimedia Commons", "url": "https://commons.wikimedia.org/wiki/File:The_Cove_Atlantis_resort_.jpg"}, {"src": "img/g_dl4_cove_14.jpg", "cap": "The Cove tower", "by": "pause.reflect", "lic": "CC BY 2.0", "via": "Flickr", "url": "https://www.flickr.com/photos/83476006@N07/8720580195"}, {"src": "img/g_dl4_cove_19.jpg", "cap": "The Cove pool", "by": "ryantow", "lic": "CC BY-NC 2.0", "via": "Flickr", "url": "https://www.flickr.com/photos/18974420@N00/8880946679"}, {"src": "img/g_dl4_cove_15.jpg", "cap": "The open-air lobby and its water feature", "by": "lotopspin", "lic": "CC BY 2.0", "via": "Flickr", "url": "https://www.flickr.com/photos/29901781@N02/5720645773"}, {"src": "img/g_dl4_cove_20.jpg", "cap": "The Cove lobby at night", "by": "supercake", "lic": "CC BY-NC 2.0", "via": "Flickr", "url": "https://www.flickr.com/photos/10717857@N00/2588509903"}, {"src": "img/g_dl4_cove_17.jpg", "cap": "Cove Beach", "by": "stevegarfield", "lic": "CC BY-NC-SA 2.0", "via": "Flickr", "url": "https://www.flickr.com/photos/48600103384@N01/5561195102"}, {"src": "img/g_dl4_cove_23.jpg", "cap": "The beach lagoon beside The Cove", "by": "K Wudrich", "lic": "CC BY-NC-SA 2.0", "via": "Flickr", "url": "https://www.flickr.com/photos/58379907@N00/8197294678"}, {"src": "img/g_dl4_atlantis_08.jpg", "cap": "The Cove tower from Paradise Beach", "by": "absoluteczech", "lic": "CC BY-NC-SA 2.0", "via": "Flickr", "url": "https://www.flickr.com/photos/23866576@N06/4662191158"}, {"src": "img/g_dl_cove_1.jpg", "cap": "The inlet beside The Cove", "by": "Greg Ball", "lic": "CC BY 3.0", "via": "Wikimedia Commons", "url": "https://commons.wikimedia.org/wiki/File:Atlantis_beach_cove_-_panoramio.jpg"}, {"src": "img/g_dl3_atlantis_09.jpg", "cap": "Atlantis water park: the river rapids ride", "by": "Don Ramey Logan", "lic": "CC BY-SA 3.0", "via": "Wikimedia Commons", "url": "https://commons.wikimedia.org/wiki/File:Rapids_Atlantis_Paradise_Island_photo_Don_Ramey_Logan.jpg"}, {"src": "img/g_dl4_atlantis_05.jpg", "cap": "Atlantis water park: the Mayan Temple slides", "by": "pause.reflect", "lic": "CC BY 2.0", "via": "Flickr", "url": "https://www.flickr.com/photos/83476006@N07/8721697548"}, {"src": "img/g_dl3_atlantis_02.jpg", "cap": "One of the Atlantis pools", "by": "Don Ramey Logan", "lic": "CC BY-SA 3.0", "via": "Wikimedia Commons", "url": "https://commons.wikimedia.org/wiki/File:Atlantis_Paradise_Island_pool_photo_Don_Ramey_Logan.jpg"}, {"src": "img/g_dl3_atlantis_31.jpg", "cap": "The glass tunnel through the Atlantis aquarium", "by": "Don Ramey Logan", "lic": "CC BY-SA 3.0", "via": "Wikimedia Commons", "url": "https://commons.wikimedia.org/wiki/File:Underwater_walkways_Atlantis_resort_photo_Don_Ramey_Logan.jpg"}, {"src": "img/g_dl3_atlantis_40.jpg", "cap": "The Dig aquarium at Atlantis, with a manta ray passing", "by": "JERRYE AND ROY KLOTZ MD", "lic": "CC BY-SA 3.0", "via": "Wikimedia Commons", "url": "https://commons.wikimedia.org/wiki/File:LOWER_LEVEL_AQUARIUM,_ATLANTIS_HOTEL,_NASSAU.jpg"}, {"src": "img/g_dl3_atlantis_14.jpg", "cap": "The Atlantis marina", "by": "Don Ramey Logan", "lic": "CC BY-SA 3.0", "via": "Wikimedia Commons", "url": "https://commons.wikimedia.org/wiki/File:Atlantis_Paradise_Island_marina_photo_Don_Ramey_Logan.jpg"}, {"src": "img/g_dl3_atlantis_00.jpg", "cap": "The whole Atlantis resort from the harbor, 2024", "by": "Larry D. Moore", "lic": "CC BY 4.0", "via": "Wikimedia Commons", "url": "https://commons.wikimedia.org/wiki/File:Atlantis_Paradise_Island_Bahamas_2024.jpg"}]}, {"id": "velas", "name": "Grand Velas Riviera Maya", "country": "mx", "tier": "Luxury alternate", "pick": false, "plan": "All-inclusive", "transfer": "45–48 min from CUN", "imgAlt": "Aerial view of Grand Velas Riviera Maya on the coast", "rating": {"score": 8.7, "count": 115, "src": "Kayak", "url": "https://www.kayak.com/Playa-del-Carmen-Hotels-Grand-Velas-Riviera-Maya.198746.ksp"}, "likes": ["Attentive, gracious staff", "The number and quality of restaurants", "The spa and the large suites"], "gripes": ["Seaweed and a rocky, shallow beach", "Pressure to tip despite all-inclusive pricing", "Early dinner slots go fast"], "rows": [["Flights for 4, American nonstop", 3000], ["Suite for 4, 6 nights at ~$2,500, taxes and tips in", 15000], ["Private transfer both ways", 160], ["Visitor tax", 64], ["Extras", 1000]], "eat": "Eight restaurants, six of them fine dining, all included.", "todo": "Teens' Club for ages 13–17, Kids' Club, pools, a big spa.", "note": "Alaina is priced at the teen rate and Charlotte at the kids' rate (ages 4–12).", "site": "https://rivieramaya.grandvelas.com/", "where": "On the coast just north of Playa del Carmen", "photos": [{"src": "img/g_dl_velas_5.jpg", "cap": "The resort from the air (resort's own photo)", "by": "Grand Velas Riviera Maya", "lic": "CC BY-SA 2.0", "via": "Wikimedia Commons", "url": "https://commons.wikimedia.org/wiki/File:Riviera_Maya_Aerial_View.jpg"}, {"src": "img/g_dl4_velas_01.jpg", "cap": "Beach and oceanfront suites (resort's own photo)", "by": "Grand Velas Riviera Maya", "lic": "CC BY-SA 2.0", "via": "Flickr", "url": "https://www.flickr.com/photos/33887484@N08/3148032199"}, {"src": "img/g_dl4_velas_21.jpg", "cap": "An Ambassador Grand Class suite (resort's own photo)", "by": "Grand Velas Riviera Maya", "lic": "CC BY-SA 2.0", "via": "Flickr", "url": "https://www.flickr.com/photos/33887484@N08/3148861784"}, {"src": "img/g_dl3_velas_10.jpg", "cap": "A master suite with jungle view (resort's own photo)", "by": "Grand Velas Riviera Maya", "lic": "CC BY-SA 2.0", "via": "Wikimedia Commons", "url": "https://commons.wikimedia.org/wiki/File:Master_Suite_with_Jungle_View.jpg"}, {"src": "img/g_dl4_velas_26.jpg", "cap": "Living room of the Presidential suite (resort's own photo)", "by": "Grand Velas Riviera Maya", "lic": "CC BY-SA 2.0", "via": "Flickr", "url": "https://www.flickr.com/photos/33887484@N08/3652255932"}, {"src": "img/g_dl4_velas_02.jpg", "cap": "Main lobby (resort's own photo)", "by": "Grand Velas Riviera Maya", "lic": "CC BY-SA 2.0", "via": "Flickr", "url": "https://www.flickr.com/photos/33887484@N08/3180223820"}, {"src": "img/g_dl3_velas_09.jpg", "cap": "Lobby of the Ambassador section (resort's own photo)", "by": "Grand Velas Riviera Maya", "lic": "CC BY-SA 2.0", "via": "Wikimedia Commons", "url": "https://commons.wikimedia.org/wiki/File:Lobby_-_Ambassador_Grand_Class_Section.jpg"}, {"src": "img/g_dl4_velas_03.jpg", "cap": "Piano bar (resort's rendering)", "by": "Grand Velas Riviera Maya", "lic": "CC BY-SA 2.0", "via": "Flickr", "url": "https://www.flickr.com/photos/33887484@N08/3179386443"}, {"src": "img/g_dl4_velas_00.jpg", "cap": "Lobby bar (resort's rendering)", "by": "Grand Velas Riviera Maya", "lic": "CC BY-SA 2.0", "via": "Flickr", "url": "https://www.flickr.com/photos/33887484@N08/3179386765"}, {"src": "img/g_dl4_velas_05.jpg", "cap": "Suite buildings and lawn (guest photo)", "by": "junfem", "lic": "CC BY-NC-SA 2.0", "via": "Flickr", "url": "https://www.flickr.com/photos/56041830@N04/5545423618"}, {"src": "img/g_dl4_velas_17.jpg", "cap": "Hotel entrance (resort's rendering)", "by": "Grand Velas Riviera Maya", "lic": "CC BY-SA 2.0", "via": "Flickr", "url": "https://www.flickr.com/photos/33887484@N08/3180217146"}, {"src": "img/g_dl4_velas_09.jpg", "cap": "Beach on the Riviera Maya (resort's own photo)", "by": "Grand Velas Riviera Maya", "lic": "CC BY-SA 2.0", "via": "Flickr", "url": "https://www.flickr.com/photos/33887484@N08/3179390917"}, {"src": "img/g_dl3_velas_08.jpg", "cap": "Sunrise over a beach palapa (resort's own photo)", "by": "Grand Velas Riviera Maya", "lic": "CC BY-SA 2.0", "via": "Wikimedia Commons", "url": "https://commons.wikimedia.org/wiki/File:Riviera_Mayan_Sunset.jpg"}]}, {"id": "regis", "name": "The St. Regis Kanai", "country": "mx", "tier": "Luxury alternate", "pick": false, "plan": "Pay as you eat", "transfer": "45 min from CUN", "rating": {"score": 9.4, "count": 151, "src": "Travelocity", "url": "https://www.travelocity.com/Playa-Del-Carmen-Hotels-The-St-Regis-Kanai-Resort.h88203504.Hotel-Information"}, "likes": ["Friendly, attentive staff", "Spotless rooms and grounds", "A calm, modern resort with a good spa"], "gripes": ["Few casual snack and food options", "Breakfast, kids' club, rollaway beds and cabanas all cost extra"], "rows": [["Flights for 4, American nonstop", 3000], ["One room, 6 nights at ~$1,500 plus ~35% taxes and service", 12150], ["Private transfer both ways", 160], ["Food, about $500 a day", 3000], ["Visitor tax", 64], ["Activities", 1000]], "eat": "Six restaurants. Nothing is included, so every meal goes on the bill.", "todo": "Butler service, family pool, kids' club, spa and a private beach in a gated community next to Mayakoba. No water park.", "note": "Whether one room sleeps four is unconfirmed. A second connecting room takes the trip to about $31,500. The $1,500 rate is my Easter-week guess.", "site": "https://www.marriott.com/en-us/hotels/cunxr-the-st-regis-kanai-resort-riviera-maya/overview/", "where": "In Kanai, just north of Mayakoba", "photos": []}, {"id": "banyan", "name": "Banyan Tree Mayakoba", "country": "mx", "tier": "Luxury alternate", "pick": false, "plan": "Pay as you eat", "transfer": "45–48 min from CUN", "rating": {"score": 8.6, "count": 334, "src": "Kayak", "url": "https://www.kayak.com/Playa-del-Carmen-Hotels-Banyan-Tree-Mayakoba.202939.ksp"}, "likes": ["Friendly, attentive staff", "A beautiful, well-kept natural setting", "The breakfast"], "gripes": ["High food prices and poor value for money", "Occasional pool and upkeep lapses", "Some older villas feel dated"], "rows": [["Flights for 4, American nonstop", 3000], ["Oceanfront pool suite with two queens, 6 nights at ~$1,800 plus 36% service and taxes", 14688], ["Private transfer both ways", 160], ["Food, about $500 a day", 3000], ["Visitor tax", 64], ["Activities", 1000]], "eat": "Six places to eat, led by Saffron (Thai) and the Sands beach club. You can also eat at the Rosewood, Fairmont and Andaz next door. Nothing is included.", "todo": "Every suite and villa has its own private pool. Free bikes, a boat tour through the lagoons, a kids' club for ages 5 to 12, a beach club and a golf course. No water park and no teen club.", "note": "Banyan Tree is one hotel, but it shares the gated Mayakoba development with three others: Rosewood, Fairmont and Andaz. It is not all-inclusive and its own site lists no meal plan; the Fairmont next door sells one as an add-on. Two suite types sleep four in two queen beds. The $1,800 rate is my Easter-week guess; listed rates start near $460 a night in low season. An extra-person charge of $100 a night may apply for Alaina. Travelocity guests rate it 9.6 from 1,001 reviews.", "site": "https://www.banyantree.com/mexico/mayakoba", "where": "In Mayakoba, between Kanai and Grand Velas", "photos": [{"src": "img/g_dl7_banyan_23.jpg", "cap": "The beach, looking along the shore (older guest photo)", "by": "¡Carlitos", "lic": "CC BY-NC-SA 2.0", "via": "Flickr", "url": "https://www.flickr.com/photos/10297518@N00/46995261524"}, {"src": "img/g_dl7_banyan_22.jpg", "cap": "Loungers at the beach club (older guest photo)", "by": "¡Carlitos", "lic": "CC BY-NC-SA 2.0", "via": "Flickr", "url": "https://www.flickr.com/photos/10297518@N00/47732333992"}, {"src": "img/g_dl7_banyan_25.jpg", "cap": "Palms and palapas on the beach (older guest photo)", "by": "¡Carlitos", "lic": "CC BY-NC-SA 2.0", "via": "Flickr", "url": "https://www.flickr.com/photos/10297518@N00/46995260494"}, {"src": "img/g_dl7_banyan_24.jpg", "cap": "Kayaks at the beach club (older guest photo)", "by": "¡Carlitos", "lic": "CC BY-NC-SA 2.0", "via": "Flickr", "url": "https://www.flickr.com/photos/10297518@N00/32841027497"}, {"src": "img/g_dl7_banyan_20.jpg", "cap": "The shoreline, with a little seaweed (older guest photo)", "by": "¡Carlitos", "lic": "CC BY-NC-SA 2.0", "via": "Flickr", "url": "https://www.flickr.com/photos/10297518@N00/40818333903"}, {"src": "img/g_dl7_banyan_03.jpg", "cap": "Loungers by the main building", "by": "Dream Photographs", "lic": "CC BY-NC 2.0", "via": "Flickr", "url": "https://www.flickr.com/photos/62297714@N00/25918554695"}, {"src": "img/g_dl7_banyan_10.jpg", "cap": "The lobby courtyard at night", "by": "¡Carlitos", "lic": "CC BY-NC-SA 2.0", "via": "Flickr", "url": "https://www.flickr.com/photos/10297518@N00/33907632258"}, {"src": "img/g_dl7_banyan_26.jpg", "cap": "The walkway to Saffron, the Thai restaurant", "by": "¡Carlitos", "lic": "CC BY-NC-SA 2.0", "via": "Flickr", "url": "https://www.flickr.com/photos/10297518@N00/47784586251"}, {"src": "img/g_dl7_banyan_04.jpg", "cap": "The lagoon at dusk", "by": "¡Carlitos", "lic": "CC BY-NC-SA 2.0", "via": "Flickr", "url": "https://www.flickr.com/photos/10297518@N00/33907535808"}, {"src": "img/g_dl7_banyan_14.jpg", "cap": "A terrace over the lagoon at night", "by": "¡Carlitos", "lic": "CC BY-NC-SA 2.0", "via": "Flickr", "url": "https://www.flickr.com/photos/10297518@N00/40818436573"}]}, {"id": "fairmont", "name": "Fairmont Mayakoba", "country": "mx", "tier": "Upscale alternate", "pick": false, "plan": "All-inclusive optional", "transfer": "about 45 min from CUN", "rating": {"score": 8.7, "count": 625, "src": "Kayak", "url": "https://www.kayak.com/Playa-del-Carmen-Hotels-Fairmont-Mayakoba.134956.ksp"}, "likes": ["Attentive, friendly staff", "The breakfast and the restaurants", "Clean, well-kept grounds"], "gripes": ["High prices for meals, plus a resort fee", "Facilities sometimes closed", "Room cleanliness, for some guests"], "rows": [["Flights for 4, American nonstop", 3000], ["Room with two queens, 6 nights at ~$850 plus ~31% taxes and fees", 6681], ["Private transfer both ways", 160], ["Food, about $400 a day without the all-inclusive plan", 2400], ["Visitor tax", 64], ["Activities", 800]], "eat": "Six restaurants and bars, including a beach grill, an Asian restaurant and a Korean barbecue beach bar. You can also eat at the Banyan Tree, Rosewood and Andaz.", "todo": "Five pools, one with a waterslide and one for kids. A kids' club for ages 5 to 11, listed teen activities such as boat tours and beach volleyball, a catamaran tour and a golf course.", "note": "This total is room-only and rests on my guess of $850 a night for Easter week. The all-inclusive package covers meals and drinks by the glass at selected restaurants for two adults and up to two children under 18 in one room, but the resort publishes no price for it, so ask for a quote with both girls listed. With 401 rooms it is the biggest and most family-oriented of the four Mayakoba hotels. Charlotte fits the kids' club only while she is 11.", "site": "https://www.fairmont.com/mayakoba-riviera-maya/", "where": "In Mayakoba, beside Banyan Tree", "photos": [{"src": "img/g_dl8_fairmont_00.jpg", "cap": "Casitas on the lagoon (older photo)", "by": "Lynx Burgos", "lic": "CC BY-SA 3.0", "via": "Wikimedia Commons", "url": "https://commons.wikimedia.org/wiki/File:Fairmont_Mayakoba_-_panoramio.jpg"}, {"src": "img/g_dl9_fairmont_00.jpg", "cap": "Moonrise over the resort beach (older guest photo)", "by": "E Photos", "lic": "CC BY 2.0", "via": "Flickr", "url": "https://www.flickr.com/photos/59283924@N00/7647924546"}]}];
+var VOTERS=[{id:"win",name:"Win"},{id:"lindsay",name:"Lindsay"},{id:"alaina",name:"Alaina"},{id:"charlotte",name:"Charlotte"}];
+var PTS={yes:2,maybe:1,no:0}, LABEL={yes:"Yes",maybe:"Maybe",no:"No"};
+var MAXPRICE=24000;
+var S={me:null,sort:"price",where:"all",votes:{},db:null,canWrite:false,ready:false};
+var writing={},pending={},cards={};
+VOTERS.forEach(function(v){S.votes[v.id]={picks:{},notes:{}}});
+var $=function(id){return document.getElementById(id)};
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function money(n){return "$"+Math.round(n).toLocaleString("en-US")}
+function total(p){return p.rows.reduce(function(a,r){return a+r[1]},0)}
+function setStatus(t){$("status").textContent=t}
+function ls(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){return null}}
+
+var PLACEHOLDER='<svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="320" height="200" style="fill:var(--sky1)"/><circle cx="250" cy="52" r="24" style="fill:var(--sun)"/><rect y="104" width="320" height="50" style="fill:var(--sea)"/><path d="M0 128 q20 -8 40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 V160 H0z" style="fill:var(--sea-pale)"/><path d="M0 150 q90 -16 180 -6 t140 -4 V200 H0z" style="fill:var(--sand)"/><path d="M62 190 q-2 -56 20 -96" fill="none" stroke-width="8" stroke-linecap="round" style="stroke:var(--trunk)"/><g style="fill:var(--palm)"><path d="M82 94 q-32 -22 -66 -2 q34 -4 66 2z"/><path d="M82 94 q-14 -38 -54 -40 q32 14 54 40z"/><path d="M82 94 q8 -40 46 -48 q-28 20 -46 48z"/><path d="M82 94 q34 -24 70 -6 q-36 -2 -70 6z"/></g></svg>';
+
+function gallery(p){
+  var tier='<span class="tierlab'+(p.pick?" pick":"")+'">'+esc(p.tier)+'</span>';
+  if(!p.photos.length)return '<div class="photo">'+PLACEHOLDER+'<span class="nophoto">No free-to-use photo found. The link below has the gallery.</span>'+tier+'</div>';
+  var n=p.photos.length;
+  var slides=p.photos.map(function(ph,i){return '<div class="slide"><img src="'+esc(ph.src)+'" alt="'+esc(ph.cap)+'" loading="'+(i?"lazy":"eager")+'" width="900" height="562"></div>'}).join("");
+  return '<div class="photo"><div class="slides" tabindex="0" role="group" aria-roledescription="carousel" aria-label="Photos of '+esc(p.name)+'. Swipe or use the arrow keys.">'+slides+'</div>'+tier+
+    (n>1?'<button type="button" class="nav prev" aria-label="Previous photo">&#8249;</button><button type="button" class="nav next" aria-label="Next photo">&#8250;</button><span class="count" aria-live="polite">1 / '+n+'</span>':'')+
+    '</div><p class="cap"></p>';
+}
+function wireGallery(el,p){
+  var sc=el.querySelector(".slides"); if(!sc)return;
+  var cap=el.querySelector(".cap"),cnt=el.querySelector(".count"),prev=el.querySelector(".prev"),next=el.querySelector(".next"),n=p.photos.length,idx=-1,t=null;
+  var calm=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function show(i){
+    if(i===idx)return; idx=i; var ph=p.photos[i];
+    cap.textContent=ph.cap+" ";
+    var s=document.createElement("span"); s.className="by"; s.appendChild(document.createTextNode("Photo: "));
+    var a=document.createElement("a"); a.href=ph.url; a.textContent=ph.by; s.appendChild(a);
+    s.appendChild(document.createTextNode(", "+ph.lic+", via "+ph.via+"."));
+    cap.appendChild(s);
+    if(cnt)cnt.textContent=(i+1)+" / "+n;
+    if(prev){prev.disabled=i===0;next.disabled=i===n-1}
+  }
+  function cur(){return sc.clientWidth?Math.max(0,Math.min(n-1,Math.round(sc.scrollLeft/sc.clientWidth))):0}
+  function go(d){var i=Math.max(0,Math.min(n-1,cur()+d));sc.scrollTo({left:i*sc.clientWidth,behavior:calm?"auto":"smooth"});show(i)}
+  sc.addEventListener("scroll",function(){clearTimeout(t);t=setTimeout(function(){show(cur())},70)});
+  sc.addEventListener("keydown",function(e){if(e.key==="ArrowRight"){e.preventDefault();go(1)}else if(e.key==="ArrowLeft"){e.preventDefault();go(-1)}});
+  if(prev){prev.addEventListener("click",function(){go(-1)});next.addEventListener("click",function(){go(1)})}
+  sc.querySelectorAll("img").forEach(function(img){img.addEventListener("error",function(){img.parentNode.innerHTML=PLACEHOLDER})});
+  show(0);
+}
+
+function buildCard(p){
+  var t=total(p), el=document.createElement("article");
+  el.className="place"; el.id="place-"+p.id;
+  var rating=p.rating.score?'<b class="score">'+p.rating.score.toFixed(1)+'</b><span>out of 10 from '+p.rating.count.toLocaleString("en-US")+' guest reviews on '+esc(p.rating.src)+'</span>':'<b class="score">'+p.rating.editor.toFixed(1)+'</b><span>out of 10, editor score from '+esc(p.rating.src)+'. No guest score found.</span>';
+  var li=function(a){return a.map(function(x){return "<li>"+esc(x)+"</li>"}).join("")};
+  var rows=p.rows.map(function(r){return "<tr><td>"+esc(r[0])+"</td><td>"+money(r[1])+"</td></tr>"}).join("");
+  var tally=VOTERS.map(function(v){return '<div data-t="'+v.id+'"><span class="who"><span class="dot v-'+v.id+'"></span><span>'+v.name+'</span></span><span class="pick">No vote</span><span class="said"></span></div>'}).join("");
+  el.innerHTML=gallery(p)+
+  '<div class="pbody">'+
+    '<div class="top"><h3>'+esc(p.name)+'</h3><span class="price num">'+money(t)+'</span></div>'+
+    '<div class="meter" title="Price on a scale ending at $24,000"><i class="'+p.country+'" style="width:'+(t/MAXPRICE*100).toFixed(1)+'%"></i></div>'+
+    '<div class="chips"><span class="chip '+p.country+'">'+(p.country==="mx"?"Mexico":"Bahamas")+'</span><span class="chip">'+esc(p.plan)+'</span><span class="chip">'+esc(p.transfer)+'</span></div>'+
+    '<p class="where">'+esc(p.where)+'</p>'+
+    '<div class="links"><a class="lnk" href="'+esc(p.site)+'">Resort website</a><a class="lnk" href="#map-'+(p.country==="mx"?"mexico":"bahamas")+'">See it on the map</a></div>'+
+    '<div class="rating">'+rating+'</div>'+
+    '<div class="rv"><div><h4>Guests like</h4><ul>'+li(p.likes)+'</ul></div><div><h4>'+(p.rating.score?"Guests complain about":"Trade-offs")+'</h4><ul>'+li(p.gripes)+'</ul></div></div>'+
+    '<details><summary>Costs, food and things to do</summary><div>'+
+      '<table>'+rows+'<tr class="total"><td>All-in for four</td><td>'+money(t)+'</td></tr></table>'+
+      '<dl><dt>Eat</dt><dd>'+esc(p.eat)+'</dd><dt>Do</dt><dd>'+esc(p.todo)+'</dd></dl>'+
+      (p.note?'<p class="fine">'+esc(p.note)+'</p>':"")+
+      '<p class="fine"><a href="'+esc(p.rating.url)+'">Photos and all reviews on '+esc(p.rating.linkName||p.rating.src)+'</a></p>'+
+    '</div></details>'+
+    '<div class="vote">'+
+      '<div class="vrow" role="group" aria-label="Vote on '+esc(p.name)+'">'+
+        ["yes","maybe","no"].map(function(k){return '<button type="button" class="vbtn" data-v="'+k+'" aria-pressed="false">'+LABEL[k]+'</button>'}).join("")+
+      '</div>'+
+      '<input class="note" id="note-'+p.id+'" type="text" maxlength="140" placeholder="Add a note for the family" aria-label="Your note on '+esc(p.name)+'">'+
+      '<div class="tally">'+tally+'</div>'+
+    '</div>'+
+  '</div>';
+  wireGallery(el,p);
+  el.querySelectorAll(".vbtn").forEach(function(b){b.addEventListener("click",function(){castVote(p.id,b.getAttribute("data-v"))})});
+  el.querySelector(".note").addEventListener("change",function(e){saveNote(p.id,e.target.value)});
+  cards[p.id]=el; return el;
+}
+
+function score(pid){var s=0,n=0;VOTERS.forEach(function(v){var k=S.votes[v.id].picks[pid];if(k){s+=PTS[k];n++}});return{pts:s,n:n}}
+
+function order(){
+  var list=PLACES.slice();
+  if(S.sort==="price")list.sort(function(a,b){return total(a)-total(b)});
+  if(S.sort==="rating")list.sort(function(a,b){return (b.rating.score||b.rating.editor)-(a.rating.score||a.rating.editor)||total(a)-total(b)});
+  if(S.sort==="votes")list.sort(function(a,b){return score(b.id).pts-score(a.id).pts||score(b.id).n-score(a.id).n||total(a)-total(b)});
+  var g=$("grid");
+  list.forEach(function(p){var c=cards[p.id];c.hidden=!(S.where==="all"||S.where===p.country);g.appendChild(c)});
+}
+
+function paint(){
+  var locked=!S.me||!S.canWrite;
+  PLACES.forEach(function(p){
+    var c=cards[p.id], mine=S.me?S.votes[S.me].picks[p.id]:null;
+    c.querySelectorAll(".vbtn").forEach(function(b){b.setAttribute("aria-pressed",String(b.getAttribute("data-v")===mine));b.disabled=S.ready&&!S.canWrite});
+    var note=c.querySelector(".note");
+    note.disabled=locked;
+    if(document.activeElement!==note)note.value=S.me?(S.votes[S.me].notes[p.id]||""):"";
+    note.placeholder=S.me?"Add a note for the family":"Pick your name above to add a note";
+    VOTERS.forEach(function(v){
+      var slot=c.querySelector('[data-t="'+v.id+'"]'),k=S.votes[v.id].picks[p.id],pk=slot.querySelector(".pick");
+      pk.textContent=k?LABEL[k]:"No vote"; pk.className="pick"+(k?" set":"");
+      slot.querySelector(".said").textContent=S.votes[v.id].notes[p.id]||"";
+    });
+  });
+  var ranked=PLACES.map(function(p){var s=score(p.id);return{p:p,pts:s.pts,n:s.n}}).filter(function(r){return r.pts>0}).sort(function(a,b){return b.pts-a.pts||b.n-a.n||total(a.p)-total(b.p)}).slice(0,5);
+  var ol=$("rank"); ol.textContent="";
+  ranked.forEach(function(r,i){
+    var li=document.createElement("li");
+    li.innerHTML='<span class="n">'+(i+1)+'</span><a href="#place-'+r.p.id+'">'+esc(r.p.name)+'</a><span class="pts">'+r.pts+(r.pts===1?' pt':' pts')+'</span><span class="trk"><i style="width:'+(r.pts/8*100)+'%"></i></span>';
+    ol.appendChild(li);
+  });
+  $("rank-empty").hidden=ranked.length>0;
+  var ul=$("prog"); ul.textContent="";
+  VOTERS.forEach(function(v){
+    var n=PLACES.filter(function(p){return S.votes[v.id].picks[p.id]}).length, li=document.createElement("li");
+    li.innerHTML='<span class="dot v-'+v.id+'"></span><span>'+v.name+'</span><b>'+n+' of '+PLACES.length+'</b>';
+    ul.appendChild(li);
+  });
+  document.querySelectorAll("[data-me]").forEach(function(b){b.setAttribute("aria-pressed",String(b.getAttribute("data-me")===S.me))});
+  if(S.sort==="votes")order();
+}
+
+function nudge(msg){var t=$("tools");t.classList.remove("nudge");void t.offsetWidth;t.classList.add("nudge");setStatus(msg)}
+function nameOf(id){return VOTERS.filter(function(v){return v.id===id})[0].name}
+
+function castVote(pid,k){
+  if(!S.ready){nudge("Votes are still loading.");return}
+  if(!S.canWrite){nudge("This account can see votes but not change them.");return}
+  if(!S.me){nudge("Pick your name first.");return}
+  var picks=S.votes[S.me].picks;
+  if(picks[pid]===k)delete picks[pid];else picks[pid]=k;
+  paint(); save(S.me);
+}
+function saveNote(pid,text){
+  if(!S.me||!S.canWrite)return;
+  var t=String(text).trim().slice(0,140), notes=S.votes[S.me].notes;
+  if((notes[pid]||"")===t)return;
+  if(t)notes[pid]=t;else delete notes[pid];
+  paint(); save(S.me);
+}
+function save(v){
+  pending[v]=true; if(writing[v])return; writing[v]=true;
+  (async function(){
+    while(pending[v]){
+      pending[v]=false; setStatus("Saving "+nameOf(v)+"'s vote…");
+      var body=JSON.parse(JSON.stringify(S.votes[v])), ref=S.db.collection("votes").doc(v);
+      try{await ref.set(body);setStatus("Saved. Voting as "+nameOf(v)+".")}
+      catch(e){
+        var code=e&&e.code;
+        if(code==="unavailable"){try{await new Promise(function(r){setTimeout(r,600+Math.random()*600)});await ref.set(body);setStatus("Saved. Voting as "+nameOf(v)+".")}catch(e2){setStatus("Couldn't save just now. Tap your vote again in a moment.")}}
+        else if(code==="invalid_argument"||code==="revoked"||code==="not_granted"){S.canWrite=false;setStatus("This account can see votes but not change them. Ask Win for edit access.");paint()}
+        else setStatus("Couldn't save just now. Tap your vote again in a moment.");
+      }
+    }
+    writing[v]=false;
+  })();
+}
+
+function clean(d){
+  var out={picks:{},notes:{}}; if(!d)return out;
+  PLACES.forEach(function(p){
+    var k=d.picks&&d.picks[p.id]; if(k==="yes"||k==="maybe"||k==="no")out.picks[p.id]=k;
+    var n=d.notes&&d.notes[p.id]; if(typeof n==="string"&&n.trim())out.notes[p.id]=n.slice(0,140);
+  });
+  return out;
+}
+
+async function connect(){
+  if(!window.claude||typeof window.claude.use!=="function"){setStatus("Voting is not set up on this copy yet.");paint();return}
+  var db=null,user=null;
+  try{var r=await Promise.all([window.claude.use("db"),window.claude.use("user")]);db=r[0];user=r[1]}catch(e){}
+  if(!db){setStatus("Sign in to Claude to see and cast votes.");paint();return}
+  S.db=db;
+  var can=null; try{can=user?await user.can("data.write"):null}catch(e){}
+  S.canWrite=can!==false; S.ready=true;
+  setStatus(S.canWrite?(S.me?"Voting as "+nameOf(S.me)+".":"Pick your name to vote."):"This account can see votes but not change them.");
+  db.collection("votes").onSnapshot(function(snap){
+    var seen={};
+    snap.docs.forEach(function(d){seen[d.id]=d.data()});
+    VOTERS.forEach(function(v){if(!writing[v.id])S.votes[v.id]=clean(seen[v.id])});
+    paint();
+  },function(){setStatus("Lost the connection to the votes. Reload the page to see new ones.")});
+  paint();
+}
+
+function start(){
+  var g=$("grid"); PLACES.forEach(function(p){g.appendChild(buildCard(p))});
+  var saved=ls("sb27-me"); if(VOTERS.some(function(v){return v.id===saved}))S.me=saved;
+  document.querySelectorAll("[data-me]").forEach(function(b){b.addEventListener("click",function(){
+    S.me=b.getAttribute("data-me"); ls("sb27-me",S.me);
+    if(S.ready)setStatus(S.canWrite?"Voting as "+nameOf(S.me)+".":"This account can see votes but not change them.");
+    paint();
+  })});
+  $("sort").addEventListener("change",function(e){S.sort=e.target.value;order()});
+  $("where").addEventListener("change",function(e){S.where=e.target.value;order()});
+  S.sort=$("sort").value; S.where=$("where").value;
+  order(); paint(); connect();
+}
+if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",start);else start();
+})();
+
+</script>
+
+</body>
+</html>
