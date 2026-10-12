@@ -6,6 +6,7 @@
 <meta name="robots" content="noindex,nofollow">
 <title>Spring Break 2027 Beach Plans</title>
 <style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<script>window.VOTE_DB="https://vaycay-2026-default-rtdb.firebaseio.com";</script>
 </head>
 <body>
 
@@ -639,7 +640,9 @@ function clean(d){
 }
 
 async function connect(){
-  if(!window.claude||typeof window.claude.use!=="function"){setStatus("Voting is not set up on this copy yet.");paint();return}
+  if(!window.claude||typeof window.claude.use!=="function"){
+    if(window.VOTE_DB){S.db=restDb(window.VOTE_DB);S.canWrite=true;S.ready=true;setStatus(S.me?"Voting as "+nameOf(S.me)+".":"Pick your name to vote.");subscribe();paint();return}
+    setStatus("Voting turns on when this page is opened in Claude.");paint();return}
   var db=null,user=null;
   try{var r=await Promise.all([window.claude.use("db"),window.claude.use("user")]);db=r[0];user=r[1]}catch(e){}
   if(!db){setStatus("Sign in to Claude to see and cast votes.");paint();return}
@@ -647,13 +650,59 @@ async function connect(){
   var can=null; try{can=user?await user.can("data.write"):null}catch(e){}
   S.canWrite=can!==false; S.ready=true;
   setStatus(S.canWrite?(S.me?"Voting as "+nameOf(S.me)+".":"Pick your name to vote."):"This account can see votes but not change them.");
-  db.collection("votes").onSnapshot(function(snap){
+  subscribe();
+  paint();
+}
+function subscribe(){
+  S.db.collection("votes").onSnapshot(function(snap){
     var seen={};
     snap.docs.forEach(function(d){seen[d.id]=d.data()});
     VOTERS.forEach(function(v){if(!writing[v.id])S.votes[v.id]=clean(seen[v.id])});
     paint();
   },function(){setStatus("Lost the connection to the votes. Reload the page to see new ones.")});
-  paint();
+}
+/* Standalone copy: votes live in a Firebase Realtime Database, reached over its REST and streaming API. */
+function restDb(base){
+  base=base.replace(/\/+$/,"");
+  return {collection:function(c){return{
+    doc:function(id){return{set:async function(body){
+      var r;
+      try{r=await fetch(base+"/"+c+"/"+id+".json",{method:"PUT",headers:{"Content-Type":"application/json"},body:JSON.stringify(body)})}
+      catch(e){var e1=new Error("offline");e1.code="unavailable";throw e1}
+      if(!r.ok){var e2=new Error("save refused");e2.code=(r.status===401||r.status===403)?"invalid_argument":"unavailable";throw e2}
+    }}},
+    onSnapshot:function(next){
+      var data={},timer=null,es=null;
+      function emit(){next({docs:Object.keys(data||{}).map(function(k){return{id:k,data:function(){return data[k]}}})})}
+      function setAt(path,val,merge){
+        var parts=String(path||"/").split("/").filter(Boolean);
+        if(!parts.length){
+          if(merge&&val&&typeof val==="object")Object.keys(val).forEach(function(k){setAt("/"+k,val[k],false)});
+          else data=(val&&typeof val==="object")?val:{};
+          return;
+        }
+        var o=data;
+        for(var i=0;i<parts.length-1;i++){if(typeof o[parts[i]]!=="object"||o[parts[i]]===null)o[parts[i]]={};o=o[parts[i]]}
+        var last=parts[parts.length-1];
+        if(merge&&val&&typeof val==="object"){
+          if(typeof o[last]!=="object"||o[last]===null)o[last]={};
+          Object.keys(val).forEach(function(k){if(val[k]===null)delete o[last][k];else o[last][k]=val[k]});
+        }else if(val===null||val===undefined)delete o[last];
+        else o[last]=val;
+      }
+      function poll(){fetch(base+"/"+c+".json").then(function(r){return r.json()}).then(function(d){data=(d&&typeof d==="object")?d:{};emit()}).catch(function(){})}
+      function startPolling(){if(timer)return;poll();timer=setInterval(poll,10000)}
+      if(window.EventSource){
+        try{
+          es=new EventSource(base+"/"+c+".json");
+          es.addEventListener("put",function(e){try{var m=JSON.parse(e.data);setAt(m.path,m.data,false);emit()}catch(x){}});
+          es.addEventListener("patch",function(e){try{var m=JSON.parse(e.data);setAt(m.path,m.data,true);emit()}catch(x){}});
+          es.onerror=function(){if(es.readyState===2)startPolling()};
+        }catch(x){startPolling()}
+      }else startPolling();
+      return function(){if(es)es.close();if(timer)clearInterval(timer)};
+    }
+  }}};
 }
 
 function start(){
